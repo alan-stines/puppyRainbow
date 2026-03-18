@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - PuppyRainbows</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Header / Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <span class="me-2 fs-3">🐶🌈</span> PuppyRainbows
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resources.html">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="community.html">Community</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-shrink-0 mb-5">
+        <div class="container mt-5">
+            <div class="text-center mb-5">
+                <h1 class="display-5 fw-bold text-primary-custom">Heartwarming Stories</h1>
+                <p class="lead text-muted">Read amazing stories from dog owners around the world.</p>
+            </div>
+
+            <div class="row">
+                <!-- Main Featured Post -->
+                <div class="col-lg-8 mb-4">
+                    <div class="card card-custom h-100">
+                        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Dogs playing" style="height: 300px; object-fit: cover;">
+                        <div class="card-body">
+                            <h3 class="card-title">How My Rescue Dog Rescued Me</h3>
+                            <p class="text-muted"><small>By Sarah Jenkins • October 12, 2026</small></p>
+                            <p class="card-text">When I walked into the shelter that sunny Tuesday, I had no idea my life was about to change forever. Meeting Max, a scruffy terrier mix with the most soulful eyes, brought a rainbow into my previously grey world...</p>
+                            <a href="#" class="btn btn-primary-custom mt-2">Read Full Story</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar Posts -->
+                <div class="col-lg-4">
+                    <h4 class="fw-bold mb-3 text-primary-custom">Recent Stories</h4>
+                    
+                    <div class="card card-custom mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title fs-5">A Rainbow After the Storm</h5>
+                            <p class="card-text text-muted small">Healing with the help of a therapy dog.</p>
+                            <a href="#" class="text-decoration-none fw-bold" style="color: var(--primary-color);">View Post</a>
+                        </div>
+                    </div>
+
+                    <div class="card card-custom mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title fs-5">The 500-Mile Journey Home</h5>
+                            <p class="card-text text-muted small">An incredible tale of a lost dog finding its way back to its family against all odds.</p>
+                            <a href="#" class="text-decoration-none fw-bold" style="color: var(--primary-color);">View Post</a>
+                        </div>
+                    </div>
+
+                    <div class="card card-custom">
+                        <div class="card-body bg-primary-light text-center">
+                            <h5 class="card-title text-primary-custom fw-bold">Share Your Story</h5>
+                            <p class="card-text small">Do you have an amazing dog story? We want to hear it!</p>
+                            <button class="btn btn-outline-rainbow btn-sm mt-2">Submit Story</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <!-- (Same Footer) -->
+    <footer class="text-center text-lg-start mt-auto">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase fw-bold mb-3">🐶🌈 PuppyRainbows</h5>
+                    <p>A fun, uplifting space for dog lovers to celebrate positivity.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase fw-bold mb-3">Links</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="gallery.html" class="text-white text-decoration-none">Gallery</a></li>
+                        <li class="mb-2"><a href="resources.html" class="text-white text-decoration-none">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase fw-bold mb-3">Community</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="blog.html" class="text-white text-decoration-none">Blog</a></li>
+                        <li class="mb-2"><a href="shop.html" class="text-white text-decoration-none">Shop</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">© 2026 PuppyRainbows.com</div>
+    </footer>
+
+    <!-- Bootstrap Bundle with JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
