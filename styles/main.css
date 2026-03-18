@@ -105,6 +105,20 @@ body {
   font-weight: 700;
 }
 
+/* Gallery */
+.gallery-card .gallery-media {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #fff;
+}
+
+.gallery-card .gallery-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* Footer */
 footer {
   background-color: var(--primary-color);
