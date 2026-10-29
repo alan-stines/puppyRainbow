@@ -26,30 +26,11 @@
             <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <span class="me-2 fs-3">🐶🌈</span> PuppyRainbows
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="gallery.html">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="resources.html">Resources</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="shop.html">Shop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="community.html">Community</a>
-                    </li>
-                </ul>
+                <ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li><li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li><li class="nav-item"><a class="nav-link" href="blog.html">Stories</a></li><li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li><li class="nav-item"><a class="nav-link active" aria-current="page" href="community.html">Community</a></li></ul>
             </div>
         </div>
     </nav>
@@ -60,10 +41,10 @@
             <div class="row align-items-center mb-4">
                 <div class="col-md-8">
                     <h1 class="display-5 fw-bold text-primary-custom">Community Forums</h1>
-                    <p class="lead text-muted">Join the conversation with thousands of dog lovers.</p>
+                    <p class="lead text-muted">A cheerful snapshot of the kinds of conversations dog lovers enjoy.</p>
                 </div>
                 <div class="col-md-4 text-md-end">
-                    <button class="btn btn-primary-custom">+ New Topic</button>
+                    <a href="gallery.html" class="btn btn-primary-custom">See Some Happy Pups</a>
                 </div>
             </div>
 
@@ -81,7 +62,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="forum-row">
+                                <tr>
                                     <td class="py-4 px-4">
                                         <h5 class="mb-1 fw-bold text-primary-custom">Puppy Introductions</h5>
                                         <p class="mb-0 text-muted small">Just got a new puppy? Introduce them to the community!</p>
@@ -91,11 +72,11 @@
                                     <td>
                                         <div class="small">
                                             <span class="d-block fw-bold">Say hello to Sparky!</span>
-                                            <span class="text-muted">by @dogmom22 • 2 mins ago</span>
+                                            <span class="text-muted">A little community inspiration</span>
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="forum-row">
+                                <tr>
                                     <td class="py-4 px-4">
                                         <h5 class="mb-1 fw-bold text-primary-custom">Training Advice & Tips</h5>
                                         <p class="mb-0 text-muted small">Struggling with potty training or pulling on the leash? Ask here.</p>
@@ -105,11 +86,11 @@
                                     <td>
                                         <div class="small">
                                             <span class="d-block fw-bold">Crate training success!</span>
-                                            <span class="text-muted">by @prouddad • 1 hour ago</span>
+                                            <span class="text-muted">A little community inspiration</span>
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="forum-row">
+                                <tr>
                                     <td class="py-4 px-4">
                                         <h5 class="mb-1 fw-bold text-primary-custom">Health & Diet</h5>
                                         <p class="mb-0 text-muted small">Discuss dog food recommendations, allergies, and general health.</p>
@@ -119,7 +100,7 @@
                                     <td>
                                         <div class="small">
                                             <span class="d-block fw-bold">Best grain-free brands?</span>
-                                            <span class="text-muted">by @healthypup • 3 hours ago</span>
+                                            <span class="text-muted">A little community inspiration</span>
                                         </div>
                                     </td>
                                 </tr>
@@ -129,7 +110,7 @@
                 </div>
             </div>
         </div>
-    </main>
+    <section class="container my-5 py-4 feel-good-section"><div class="row justify-content-center"><div class="col-lg-9 text-center"><h2 class="fw-bold text-primary-custom mb-3">Kindness is our favorite breed</h2><p class="lead">Whether you're celebrating a training breakthrough, laughing about a chewed-up slipper, or welcoming a new best friend, there's room for every dog lover here. Share encouragement in your own circles and make someone's day a little brighter.</p></div></div></section></main>
 
     <!-- Footer -->
     <footer class="text-center text-lg-start mt-auto">
@@ -137,11 +118,14 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
                     <h5 class="text-uppercase fw-bold mb-3">🐶🌈 PuppyRainbows</h5>
-                    <p>A fun, uplifting space for dog lovers to celebrate positivity.</p>
+                    <p>
+                        A fun, uplifting space for dog lovers to celebrate positivity, share stories, and access vital care resources.
+                    </p>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                     <h5 class="text-uppercase fw-bold mb-3">Links</h5>
                     <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="index.html#our-story" class="text-white text-decoration-none">Our Story</a></li>
                         <li class="mb-2"><a href="gallery.html" class="text-white text-decoration-none">Gallery</a></li>
                         <li class="mb-2"><a href="resources.html" class="text-white text-decoration-none">Resources</a></li>
                     </ul>
@@ -150,12 +134,15 @@
                     <h5 class="text-uppercase fw-bold mb-3">Community</h5>
                     <ul class="list-unstyled mb-0">
                         <li class="mb-2"><a href="blog.html" class="text-white text-decoration-none">Blog</a></li>
+                        <li class="mb-2"><a href="community.html" class="text-white text-decoration-none">Forums</a></li>
                         <li class="mb-2"><a href="shop.html" class="text-white text-decoration-none">Shop</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">© 2026 PuppyRainbows.com</div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2026 PuppyRainbows.com
+        </div>
     </footer>
 
     <!-- Bootstrap Bundle with JS -->
