@@ -10,6 +10,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .puppy-hero { padding: clamp(2.5rem, 6vw, 5rem) 0; }
+        .puppy-hero .hero-eyebrow { color: var(--primary-color); font-weight: 800; letter-spacing: .12em; text-transform: uppercase; font-size: .8rem; }
+        .puppy-collage { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; padding: 12px; border-radius: 2rem; background: linear-gradient(135deg, #ff914d, #ffde59, #7ed957, #5271ff, #cb6ce6); box-shadow: 0 18px 45px rgba(99, 51, 147, .18); }
+        .puppy-photo { position: relative; margin: 0; overflow: hidden; border-radius: 1.25rem; background: #f0e6ff; }
+        .puppy-photo:first-child { grid-column: 1 / -1; }
+        .puppy-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+        .puppy-photo:first-child img { aspect-ratio: 3 / 2; object-position: center 40%; }
+        .puppy-photo figcaption { position: absolute; bottom: .75rem; left: .75rem; right: .75rem; width: fit-content; max-width: calc(100% - 1.5rem); padding: .45rem .8rem; border-radius: 1rem; background: rgba(255,255,255,.95); color: #4e2874; font-size: .8rem; font-weight: 700; }
+        .puppy-photo img { transition: transform .3s ease; }
+        @media (hover: hover) { .puppy-photo:hover img { transform: scale(1.04); } }
+        @media (max-width: 575.98px) { .puppy-collage { gap: .65rem; padding: 8px; } .puppy-photo figcaption { font-size: .7rem; padding: .35rem .55rem; left: .5rem; bottom: .5rem; } }
+    </style>
 </head>
 <body>
 
@@ -31,15 +44,33 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section class="hero-section text-center" id="our-story">
+        <section class="hero-section puppy-hero" id="our-story" aria-labelledby="hero-title">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <h1 class="display-4 fw-bold text-primary-custom mb-4">Celebrate the Joy of Puppies & Rainbows</h1>
-                        <p class="lead text-muted mb-5">Join our vibrant community of dog enthusiasts. Discover heartwarming stories, share your puppy photos, and explore resources to give your furry friend the best life possible.</p>
-                        <div class="d-flex justify-content-center gap-3">
-                            <a href="gallery.html" class="btn btn-primary-custom btn-lg">Explore Gallery</a>
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6 text-center text-lg-start">
+                        <p class="hero-eyebrow mb-3">Big smiles. Little paws. All the joy.</p>
+                        <h1 id="hero-title" class="display-4 fw-bold text-primary-custom mb-4">Your daily dose of puppy happiness.</h1>
+                        <p class="lead text-muted mb-4">Goofy faces, curious noses, and the kind of joy that comes with four paws. Take a little break, meet the pups, and find your bright spot.</p>
+                        <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
+                            <a href="gallery.html" class="btn btn-primary-custom btn-lg">Meet the Pups</a>
                             <a href="community.html" class="btn btn-outline-rainbow btn-lg">Join the Community</a>
+                        </div>
+                        <p class="small text-muted mt-4 mb-0">A little more tail wagging. A little less doomscrolling.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="puppy-collage" role="group" aria-label="A few faces to brighten your day">
+                            <figure class="puppy-photo">
+                                <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&amp;fit=crop&amp;w=960&amp;h=640&amp;q=85" alt="A beagle looking curiously toward the camera outdoors" width="960" height="640" fetchpriority="high">
+                                <figcaption>Certified day brightener ☀️</figcaption>
+                            </figure>
+                            <figure class="puppy-photo">
+                                <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&amp;fit=crop&amp;w=480&amp;h=360&amp;q=80" alt="A dog posing for a cheerful portrait" width="480" height="360" decoding="async">
+                                <figcaption>Good dog energy ✨</figcaption>
+                            </figure>
+                            <figure class="puppy-photo">
+                                <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&amp;fit=crop&amp;w=480&amp;h=360&amp;q=80" alt="A small dog with upright ears looking at the camera" width="480" height="360" decoding="async">
+                                <figcaption>Small pup. Big personality.</figcaption>
+                            </figure>
                         </div>
                     </div>
                 </div>
