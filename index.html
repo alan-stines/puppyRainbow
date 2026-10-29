@@ -214,8 +214,11 @@
       const pet = document.getElementById('dog-pal-pet');
       const note = document.getElementById('dog-pal-note');
       const mute = document.getElementById('dog-pal-mute');
-      let muted = false, busy = false, audio, timer;
-      const voices = new Set();
+      let muted = false, busy = false, timer, playback = 0;
+      const audio = document.createElement('audio');
+      audio.preload = 'auto';
+      audio.setAttribute('playsinline', '');
+      audio.src = makeBarkClip();
       try { muted = localStorage.getItem('puppyRainbow.muted') === 'true'; } catch {}
       function syncMute() {
         mute.textContent = muted ? 'Unmute' : 'Mute';
@@ -223,44 +226,63 @@
         mute.setAttribute('aria-label', muted ? 'Unmute puppy sound' : 'Mute puppy sound');
         pet.setAttribute('aria-label', muted ? 'Pet Rainbow (sound muted)' : 'Pet Rainbow and hear a bark');
       }
-      function stopSound() {
-        voices.forEach(source => { try { source.stop(); } catch {} });
-        voices.clear();
-      }
-      // Short, quiet synthesized woofs; no audio downloads or autoplay.
-      async function bark() {
-        const Audio = window.AudioContext || window.webkitAudioContext;
-        if (!Audio || muted) return;
-        try {
-          audio = audio || new Audio();
-          await audio.resume();
-          if (muted || pal.hidden || document.hidden) return;
-          for (const delay of [0, .22]) {
-            const start = audio.currentTime + delay;
-            const source = audio.createBufferSource();
-            const length = Math.floor(audio.sampleRate * .16);
-            const buffer = audio.createBuffer(1, length, audio.sampleRate);
-            const data = buffer.getChannelData(0);
-            for (let i = 0; i < length; i++) {
-              const t = i / audio.sampleRate;
-              data[i] = .65 * Math.sin(2 * Math.PI * (190 * t - 200 * t * t)) + .35 * (Math.random() * 2 - 1);
-            }
-            source.buffer = buffer;
-            const filter = audio.createBiquadFilter();
-            filter.type = 'lowpass'; filter.frequency.value = 1100;
-            const gain = audio.createGain();
-            gain.gain.setValueAtTime(0, start);
-            gain.gain.linearRampToValueAtTime(.22, start + .012);
-            gain.gain.exponentialRampToValueAtTime(.001, start + .15);
-            source.connect(filter); filter.connect(gain); gain.connect(audio.destination);
-            voices.add(source);
-            source.onended = () => { voices.delete(source); source.disconnect(); filter.disconnect(); gain.disconnect(); };
-            source.start(start); source.stop(start + .16);
+      // Build a small PCM WAV once, then use the mobile media playback path.
+      // No network request, AudioContext, or asynchronous work before play().
+      function makeBarkClip() {
+        const rate = 22050, duration = .58;
+        const count = Math.ceil(rate * duration);
+        const bytes = new Uint8Array(44 + count * 2);
+        const view = new DataView(bytes.buffer);
+        const text = (offset, value) => {
+          for (let i = 0; i < value.length; i++) bytes[offset + i] = value.charCodeAt(i);
+        };
+        text(0, 'RIFF'); view.setUint32(4, bytes.length - 8, true);
+        text(8, 'WAVE'); text(12, 'fmt ');
+        view.setUint32(16, 16, true); view.setUint16(20, 1, true);
+        view.setUint16(22, 1, true); view.setUint32(24, rate, true);
+        view.setUint32(28, rate * 2, true); view.setUint16(32, 2, true);
+        view.setUint16(34, 16, true); text(36, 'data');
+        view.setUint32(40, count * 2, true);
+        for (let i = 0; i < count; i++) {
+          const time = i / rate;
+          const t = time < .28 ? time : time - .28;
+          let value = 0;
+          if (t < .22) {
+            const envelope = Math.min(t / .008, 1) * Math.pow(1 - t / .22, 1.5);
+            const phase = 2 * Math.PI * (280 * t - 180 * t * t);
+            value = envelope * (.42 * Math.sin(phase) + .24 * Math.sin(phase * 2)
+              + .14 * Math.sin(phase * 3) + .10 * (Math.random() * 2 - 1));
           }
-        } catch { note.textContent = 'Woof! Sending quiet puppy love.'; }
+          view.setInt16(44 + i * 2, Math.round(value * 32767), true);
+        }
+        let binary = '';
+        for (const byte of bytes) binary += String.fromCharCode(byte);
+        return 'data:audio/wav;base64,' + btoa(binary);
+      }
+      function stopSound() {
+        playback++;
+        audio.pause();
+        try { audio.currentTime = 0; } catch {}
+      }
+      function bark() {
+        if (muted || pal.hidden || document.hidden) return;
+        const request = ++playback;
+        const failed = () => {
+          if (request !== playback || muted || pal.hidden || document.hidden) return;
+          note.textContent = 'Sound blocked. Tap again, or try Safari/Chrome with media volume up.';
+          busy = false;
+          pal.classList.remove('yapping');
+        };
+        try {
+          audio.currentTime = 0;
+          // Keep play() in the original click handler for mobile user activation.
+          const playing = audio.play();
+          if (playing && typeof playing.catch === 'function') playing.catch(failed);
+        } catch { failed(); }
       }
       pet.addEventListener('click', () => {
         if (busy) return;
+        clearTimeout(timer);
         busy = true;
         pal.classList.add('yapping');
         note.textContent = muted ? 'Woof! Quiet mode, big love.' : 'Yap yap! You made my tail wag!';
@@ -271,7 +293,8 @@
         muted = !muted;
         if (muted) stopSound();
         syncMute();
-        note.textContent = muted ? 'Quiet mode. Still a good dog.' : 'Sound on! Tap me to yap.';
+        note.textContent = muted ? 'Quiet mode. Still a good dog.' : 'Sound on! Here is a little yap.';
+        if (!muted) bark();
         try { localStorage.setItem('puppyRainbow.muted', String(muted)); } catch {}
       });
       document.getElementById('dog-pal-hide').addEventListener('click', () => {
