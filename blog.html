@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - PuppyRainbows</title>
+    <title>Happy Tales - PuppyRainbows</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
@@ -30,57 +30,120 @@
 
     <!-- Main Content -->
     <main class="flex-shrink-0 mb-5">
-        <div class="container mt-5">
-            <div class="text-center mb-5">
-                <h1 class="display-5 fw-bold text-primary-custom">Heartwarming Stories</h1>
-                <p class="lead text-muted">Read amazing stories from dog owners around the world.</p>
-            </div>
-
-            <div class="row">
-                <!-- Main Featured Post -->
-                <div class="col-lg-8 mb-4">
-                    <div class="card card-custom h-100">
-                        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Dogs playing" style="height: 300px; object-fit: cover;">
-                        <div class="card-body">
-                            <h3 class="card-title">How My Rescue Dog Rescued Me</h3>
-                            <p class="text-muted"><small>By Sarah Jenkins • October 12, 2026</small></p>
-                            <p class="card-text">When I walked into the shelter that sunny Tuesday, I had no idea my life was about to change forever. Meeting Max, a scruffy terrier mix with the most soulful eyes, brought a rainbow into my previously grey world...</p>
-                            <a href="community.html" class="btn btn-primary-custom mt-2">Read Full Story</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Sidebar Posts -->
-                <div class="col-lg-4">
-                    <h4 class="fw-bold mb-3 text-primary-custom">Recent Stories</h4>
-                    
-                    <div class="card card-custom mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title fs-5">A Rainbow After the Storm</h5>
-                            <p class="card-text text-muted small">Healing with the help of a therapy dog.</p>
-                            <a href="community.html" class="text-decoration-none fw-bold" style="color: var(--primary-color);">View Post</a>
-                        </div>
-                    </div>
-
-                    <div class="card card-custom mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title fs-5">The 500-Mile Journey Home</h5>
-                            <p class="card-text text-muted small">An incredible tale of a lost dog finding its way back to its family against all odds.</p>
-                            <a href="community.html" class="text-decoration-none fw-bold" style="color: var(--primary-color);">View Post</a>
-                        </div>
-                    </div>
-
-                    <div class="card card-custom">
-                        <div class="card-body bg-primary-light text-center">
-                            <h5 class="card-title text-primary-custom fw-bold">Share Your Story</h5>
-                            <p class="card-text small">Do you have an amazing dog story? We want to hear it!</p>
-                            <button class="btn btn-outline-rainbow btn-sm mt-2">Submit Story</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <header class="container text-center my-5" id="story-menu">
+        <p class="text-primary-custom fw-bold">SMALL STORIES. BIG HEART.</p>
+        <h1 class="display-5 fw-bold text-primary-custom">The Happy Tales Collection</h1>
+        <p class="lead text-muted">Six short escapes into a world of curious paws, kind neighbors, and excellent naps.</p>
+        <p class="small text-muted">Original fictional stories by PuppyRainbows, paired with illustrative dog photographs.</p>
+      </header>
+      <nav class="container mb-5" aria-label="Choose a story">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+          <div class="col"><a class="story-jump h-100" href="#basket-committee"><span class="small">Tiny comedy</span><strong>The Basket Committee</strong><span>One basket. Several puppies. Absolutely no qualified chairperson.</span></a></div>
+          <div class="col"><a class="story-jump h-100" href="#great-expedition"><span class="small">Little adventures</span><strong>The Great Backyard Expedition</strong><span>Maple and Bean set out to discover what lay beyond the flowerpot.</span></a></div>
+          <div class="col"><a class="story-jump h-100" href="#garden-club"><span class="small">Everyday joy</span><strong>The Unofficial Garden Club</strong><span>The flowers had a caretaker. Now they also had an enthusiastic audience.</span></a></div>
+          <div class="col"><a class="story-jump h-100" href="#room-for-one-more"><span class="small">Friendship</span><strong>Room for One More</strong><span>Mochi had found the perfect spot. Sharing it was going to take some thought.</span></a></div>
+          <div class="col"><a class="story-jump h-100" href="#welcome-committee"><span class="small">New beginnings</span><strong>The Welcome Committee</strong><span>On an unfamiliar street, a friendly hello can make all the difference.</span></a></div>
+          <div class="col"><a class="story-jump h-100" href="#nap-shift"><span class="small">Slow Sundays</span><strong>Clocking In for the Nap Shift</strong><span>The afternoon schedule was full. The puppies proposed a revision.</span></a></div>
         </div>
-    <section class="container my-5 py-4 feel-good-section"><div class="row justify-content-center"><div class="col-lg-9 text-center"><h2 class="fw-bold text-primary-custom mb-3">Good stories deserve a happy place</h2><p class="lead">A kind neighbor, a second chance, a puppy who finally trusts someone: the world is full of little victories. Our stories celebrate the humans and dogs who make ordinary days feel extraordinary.</p></div></div></section></main>
+      </nav>
+      <div class="container">
+        <article id="basket-committee" class="story-article mb-5" aria-labelledby="basket-committee-title">
+          <figure class="mb-0">
+            <div class="story-photo"><img src="https://images.unsplash.com/photo-1672838564872-6a8184194da2?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Pale yellow puppies nestled together in a wicker basket" width="800" height="600" loading="lazy" decoding="async"></div>
+            <figcaption class="px-4 pt-2"><a href="https://unsplash.com/photos/mZj60Mms7_Y" class="small">Photo source on Unsplash</a></figcaption>
+          </figure>
+          <div class="story-copy p-4 p-md-5">
+            <p class="small text-primary-custom fw-bold">Tiny comedy · Original fiction · 1 minute read</p>
+            <h2 id="basket-committee-title" class="text-primary-custom fw-bold mb-4">The Basket Committee</h2>
+            <p>The first meeting of the Basket Committee began when a puppy named Waffles placed one paw on his brother's head. This was interpreted as a motion to adjourn. Nobody objected, although someone did sneeze.</p>
+            <p>Outside the basket, the morning was already busy. A delivery truck hummed past. A neighbor wrestled with a garden hose. Inside, the committee considered its priorities: finding the warm patch, borrowing a sibling's shoulder, and determining whether the basket handle was looking at them.</p>
+            <p>June had planned to answer three emails before breakfast. Instead, she sat beside the basket with her coffee and watched Waffles try to stay awake. His eyes closed, opened with great determination, and closed again. She put her phone facedown.</p>
+            <p>When the committee finally adjourned, it did so in a soft, tangled heap. June finished her coffee while it was still warm. Nothing had been accomplished according to her list. She added one item at the bottom: start the day smiling. Then she checked it off.</p>
+            <a href="#story-menu" class="fw-bold">Choose another happy tale &uarr;</a>
+          </div>
+        </article>
+        <article id="great-expedition" class="story-article mb-5" aria-labelledby="great-expedition-title">
+          <figure class="mb-0">
+            <div class="story-photo"><img src="https://images.unsplash.com/photo-1751315722266-91d26a255a35?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Black and cream puppies exploring a green lawn" width="800" height="600" loading="lazy" decoding="async"></div>
+            <figcaption class="px-4 pt-2"><a href="https://unsplash.com/photos/AiKqyABzG-s" class="small">Photo source on Unsplash</a></figcaption>
+          </figure>
+          <div class="story-copy p-4 p-md-5">
+            <p class="small text-primary-custom fw-bold">Little adventures · Original fiction · 1 minute read</p>
+            <h2 id="great-expedition-title" class="text-primary-custom fw-bold mb-4">The Great Backyard Expedition</h2>
+            <p>Maple was certain the backyard was enormous. Bean suspected it might go on forever. Together, they prepared for an expedition by standing on the same leaf until it crunched. This was an encouraging start.</p>
+            <p>Their human, Eli, followed a few steps behind. He had brought a book and a chair, assuming the morning would involve sitting. Maple had other plans. She discovered a shadow. Bean discovered Maple's shadow. Both discoveries required immediate investigation.</p>
+            <p>At the far side of the flowerpot stood a single dandelion. Maple leaned forward. Bean leaned forward. The breeze leaned forward too, and the flower nodded at all three of them. Bean sat down, apparently satisfied that introductions had gone well.</p>
+            <p>By the time they returned to Eli's chair, they had traveled perhaps twelve feet. He had read half a page. Maple curled up against his shoe, while Bean settled on the other side. Eli marked his place and looked around the yard. He had lived there for years without ever properly meeting that dandelion.</p>
+            <a href="#story-menu" class="fw-bold">Choose another happy tale &uarr;</a>
+          </div>
+        </article>
+        <article id="garden-club" class="story-article mb-5" aria-labelledby="garden-club-title">
+          <figure class="mb-0">
+            <div class="story-photo"><img src="https://images.unsplash.com/photo-1672838564839-0b759f75b956?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Pale yellow puppies exploring grass beside garden plants" width="800" height="600" loading="lazy" decoding="async"></div>
+            <figcaption class="px-4 pt-2"><a href="https://unsplash.com/photos/T54mPOyhVI8" class="small">Photo source on Unsplash</a></figcaption>
+          </figure>
+          <div class="story-copy p-4 p-md-5">
+            <p class="small text-primary-custom fw-bold">Everyday joy · Original fiction · 1 minute read</p>
+            <h2 id="garden-club-title" class="text-primary-custom fw-bold mb-4">The Unofficial Garden Club</h2>
+            <p>Every Saturday, Rosa tended the pots outside her back door. She spoke to the plants as she worked. One morning, three curious puppies arrived beside her, supervised by her daughter, and listened as though she were delivering a very important lecture.</p>
+            <p>Rosa explained that the tallest plant needed a little support. A puppy named Pip tilted his head. She described the new leaves on the smallest pot. Pip tilted his head the other way. Her daughter announced that attendance at Garden Club had never been better.</p>
+            <p>They set a blanket on the grass, safely away from the tools and plants. The puppies sat for almost four seconds before rearranging themselves into a pile. Rosa continued her talk anyway. She had always appreciated a relaxed audience.</p>
+            <p>Afterward, her daughter took a picture: Rosa with soil on her gloves, the pots bright behind her, and Pip watching a butterfly from the blanket. Rosa printed it for the refrigerator. Underneath, she wrote the club's first official rule: you do not have to understand everything to enjoy being here.</p>
+            <a href="#story-menu" class="fw-bold">Choose another happy tale &uarr;</a>
+          </div>
+        </article>
+        <article id="room-for-one-more" class="story-article mb-5" aria-labelledby="room-for-one-more-title">
+          <figure class="mb-0">
+            <div class="story-photo"><img src="https://images.unsplash.com/photo-1769117319103-ea3ade5c4749?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Three fluffy puppies sitting together in a woven basket" width="800" height="600" loading="lazy" decoding="async"></div>
+            <figcaption class="px-4 pt-2"><a href="https://unsplash.com/photos/SDlg0zwSw_g" class="small">Photo source on Unsplash</a></figcaption>
+          </figure>
+          <div class="story-copy p-4 p-md-5">
+            <p class="small text-primary-custom fw-bold">Friendship · Original fiction · 1 minute read</p>
+            <h2 id="room-for-one-more-title" class="text-primary-custom fw-bold mb-4">Room for One More</h2>
+            <p>Mochi had claimed the middle of the basket. It was warm, comfortably padded, and offered an excellent view of absolutely everything he did not intend to get up for. His sister, Poppy, settled on his left. This seemed reasonable.</p>
+            <p>Then came Fig. Fig was small, hopeful, and carrying an expression that suggested he had misplaced his reservation. He rested his chin on the basket edge. Mochi looked at him. Fig looked back. Poppy yawned through the entire negotiation.</p>
+            <p>Their human, Sam, sat nearby and waited. There was another soft bed beside the basket, but Fig had his heart set on company. After a long moment, Mochi shifted one paw. Then a shoulder. Sam helped Fig gently into the newly available space.</p>
+            <p>The basket became a little more crowded and a great deal quieter. Fig tucked his nose beside Mochi, who sighed as if accommodating guests were a full-time profession. Five minutes later, all three were asleep. Sam took a seat beside them, leaving the dishes for another moment. There was room for one more quiet thing in the afternoon.</p>
+            <a href="#story-menu" class="fw-bold">Choose another happy tale &uarr;</a>
+          </div>
+        </article>
+        <article id="welcome-committee" class="story-article mb-5" aria-labelledby="welcome-committee-title">
+          <figure class="mb-0">
+            <div class="story-photo"><img src="https://images.unsplash.com/photo-1691071590573-f21a82d6e129?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Brown puppies standing together on a dirt path" width="800" height="600" loading="lazy" decoding="async"></div>
+            <figcaption class="px-4 pt-2"><a href="https://unsplash.com/photos/OkmIvBOhl0s" class="small">Photo source on Unsplash</a></figcaption>
+          </figure>
+          <div class="story-copy p-4 p-md-5">
+            <p class="small text-primary-custom fw-bold">New beginnings · Original fiction · 1 minute read</p>
+            <h2 id="welcome-committee-title" class="text-primary-custom fw-bold mb-4">The Welcome Committee</h2>
+            <p>Nina's first morning in the new neighborhood began with a cardboard box labeled KITCHEN, which contained precisely one scarf and a desk lamp. She decided that unpacking could wait. A walk might help.</p>
+            <p>At the house next door, her neighbor was supervising three puppies in a fenced yard. The smallest spotted Nina first. Its tail began moving with such commitment that the rest of its body joined in. The other two hurried over to see what deserved a celebration.</p>
+            <p>'They take welcoming duties seriously,' the neighbor said. Her name was Jo. Nina introduced herself through the gate, and the conversation moved from moving boxes to the best shady walking route. The puppies listened with the attention usually reserved for interesting smells.</p>
+            <p>Nina headed home with Jo's name, a recommendation for a nearby bakery, and a lighter feeling than she had carried out the door. The boxes were still there. The kitchen still contained a desk lamp. But the street outside now had a familiar face, three wagging tails, and a reason to step outside again tomorrow.</p>
+            <a href="#story-menu" class="fw-bold">Choose another happy tale &uarr;</a>
+          </div>
+        </article>
+        <article id="nap-shift" class="story-article mb-5" aria-labelledby="nap-shift-title">
+          <figure class="mb-0">
+            <div class="story-photo"><img src="https://images.unsplash.com/photo-1655136056905-943cf5840912?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="White puppies resting in a wooden box on a striped blanket" width="800" height="600" loading="lazy" decoding="async"></div>
+            <figcaption class="px-4 pt-2"><a href="https://unsplash.com/photos/5OwrztnvAsQ" class="small">Photo source on Unsplash</a></figcaption>
+          </figure>
+          <div class="story-copy p-4 p-md-5">
+            <p class="small text-primary-custom fw-bold">Slow Sundays · Original fiction · 1 minute read</p>
+            <h2 id="nap-shift-title" class="text-primary-custom fw-bold mb-4">Clocking In for the Nap Shift</h2>
+            <p>Alex's Sunday list began ambitiously: laundry, shelves, groceries, and finally sorting the drawer that contained every cable ever manufactured. By two o'clock, the laundry was folded and the drawer had somehow become worse.</p>
+            <p>Nearby, the puppies were having a very different afternoon. Two were asleep on a striped blanket. Another was trying to decide whether sitting upright counted as resting. The fourth had already abandoned the question and placed its chin on a sibling.</p>
+            <p>Alex sat down beside them for what was supposed to be one minute. The house made its small Sunday sounds: the refrigerator humming, a branch tapping the window, a puppy sighing as though it had completed an exceptionally demanding project.</p>
+            <p>Ten minutes passed. Alex got up, made a sandwich, and returned to the shelves. The jobs still needed doing, but they no longer seemed to be chasing one another through the afternoon. Across the room, the nap shift continued without interruption. The cables could wait until next weekend. Their supervisor was asleep.</p>
+            <a href="#story-menu" class="fw-bold">Choose another happy tale &uarr;</a>
+          </div>
+        </article>
+      </div>
+      <section class="container p-4 feel-good-section text-center">
+        <h2 class="text-primary-custom fw-bold">Not ready to leave the puppy pile?</h2>
+        <p>There are more little faces waiting to brighten your day.</p>
+        <a class="btn btn-primary-custom" href="gallery.html">Browse the dog gallery</a>
+      </section>
+    </main>
 
     <!-- Footer -->
     <!-- (Same Footer) -->

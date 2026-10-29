@@ -144,3 +144,14 @@ footer {
 a:focus-visible, button:focus-visible { outline: 3px solid #ff914d; outline-offset: 3px; }
 .feel-good-section { background: linear-gradient(135deg, #f0e6ff, #fff); border-radius: 1.5rem; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; } }
+
+/* Photo collection and complete stories */
+.story-jump { display: flex; flex-direction: column; gap: .6rem; padding: 1.5rem; background: #fff; border: 1px solid #e2d4ef; border-radius: 1rem; color: #4e2874; text-decoration: none; }
+.story-jump:hover { background: #f0e6ff; color: #4e2874; }
+.story-jump strong { font-size: 1.15rem; }
+.story-article { max-width: 850px; margin-inline: auto; border-radius: 1.5rem; overflow: hidden; background: #fff; box-shadow: 0 5px 25px #63339310; scroll-margin-top: 6rem; }
+.story-photo { background: #f0e6ff; aspect-ratio: 16 / 9; }
+.story-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.story-copy { max-width: 72ch; margin-inline: auto; line-height: 1.8; }
+#story-menu { scroll-margin-top: 6rem; }
+.gallery-card a, .story-article a { color: #633393; }
