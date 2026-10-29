@@ -139,3 +139,8 @@ footer {
 .font-weight-bold {
   font-weight: 700 !important;
 }
+
+/* Accessibility and calmer motion */
+a:focus-visible, button:focus-visible { outline: 3px solid #ff914d; outline-offset: 3px; }
+.feel-good-section { background: linear-gradient(135deg, #f0e6ff, #fff); border-radius: 1.5rem; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; } }
