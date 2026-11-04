@@ -1,0 +1,480 @@
+{
+  "photos": [
+    {
+      "id": "p1",
+      "photo": "photo-1526137966266-60618b40bcd4",
+      "alt": "A brown-and-white corgi walking across a snowy field",
+      "title": "The Snow Inspector",
+      "caption": "Low clearance. High enthusiasm.",
+      "creditUrl": "https://unsplash.com/photos/KQN500iE8KA",
+      "credit": "Photo: Peter Pryharski / Unsplash",
+      "story": "snow-inspector",
+      "category": "Adventure",
+      "src": "assets/p1.jpg"
+    },
+    {
+      "id": "p2",
+      "photo": "photo-1759914915112-cc33ddf14cb1",
+      "alt": "A relaxed corgi lying on green grass with its tongue out",
+      "title": "The Grass Is Greener Right Here",
+      "caption": "Out of office. Available for compliments.",
+      "creditUrl": "https://unsplash.com/photos/sLf1NVW-Nhc",
+      "credit": "Photo: Alvan Nee / Unsplash",
+      "story": "grass-is-greener",
+      "category": "Cozy cuddles",
+      "src": "assets/p2.jpg"
+    },
+    {
+      "id": "p3",
+      "photo": "photo-1611712141204-e0203bf9a956",
+      "alt": "A corgi resting in snow with snowflakes on its face",
+      "title": "A Postcard from the Back Step",
+      "caption": "Snow on the nose. Sunshine in the personality.",
+      "creditUrl": "https://unsplash.com/photos/PnFG1JE8Kls",
+      "credit": "Photo: Sigmund / Unsplash",
+      "story": "postcard-home",
+      "category": "Cozy cuddles",
+      "src": "assets/p3.jpg"
+    },
+    {
+      "id": "p4",
+      "photo": "photo-1763718391879-d7ce169564f8",
+      "alt": "A happy corgi sitting in grass scattered with autumn leaves",
+      "title": "The One-Dog Autumn Parade",
+      "caption": "Fall collection: one smile, several crunchy accessories.",
+      "creditUrl": "https://unsplash.com/photos/g7DQirnwu-g",
+      "credit": "Photo: Alvan Nee / Unsplash",
+      "story": "leaf-parade",
+      "category": "Goofballs",
+      "src": "assets/p4.jpg"
+    },
+    {
+      "id": "p5",
+      "photo": "photo-1588833945832-a888b6a03c2d",
+      "alt": "A brown-and-white corgi standing on a broad rock beside calm water",
+      "title": "The Perfect View",
+      "caption": "Taking the scenic route very seriously.",
+      "creditUrl": "https://unsplash.com/photos/Z724iiT1x9A",
+      "credit": "Photo: Eva Chen / Unsplash",
+      "story": "perfect-view",
+      "category": "Adventure",
+      "src": "assets/p5.jpg"
+    },
+    {
+      "id": "p6",
+      "photo": "photo-1705769947686-21cdb68ddc06",
+      "alt": "A small brown dog bounding through fresh snow near a bare tree",
+      "title": "Five Minutes of Winter Recess",
+      "caption": "The forecast calls for a brief burst of zoomies.",
+      "creditUrl": "https://unsplash.com/photos/nlKjVTEx4Y8",
+      "credit": "Photo: Michał Robak / Unsplash",
+      "story": "winter-recess",
+      "category": "Adventure",
+      "src": "assets/p6.jpg"
+    },
+    {
+      "id": "p7",
+      "photo": "photo-1543466835-00a7907e9de1",
+      "alt": "A beagle looking toward the camera outdoors",
+      "title": "The neighborhood supervisor",
+      "caption": "Every walk begins with a very thorough neighborhood inspection.",
+      "creditUrl": "https://unsplash.com",
+      "credit": "Unsplash",
+      "story": null,
+      "category": "Goofballs",
+      "src": "assets/p7.jpg"
+    },
+    {
+      "id": "p8",
+      "photo": "photo-1583511655857-d19b40a7a54e",
+      "alt": "A dog posing for a portrait",
+      "title": "Main character energy",
+      "caption": "No appointment necessary. This face is always ready for its close-up.",
+      "creditUrl": "https://unsplash.com",
+      "credit": "Unsplash",
+      "story": null,
+      "category": "Goofballs",
+      "src": "assets/p8.jpg"
+    },
+    {
+      "id": "p9",
+      "photo": "photo-1537151608828-ea2b11777ee8",
+      "alt": "A small dog with upright ears",
+      "title": "All ears",
+      "caption": "Did someone say walk? Or snack? Either way, you have an audience.",
+      "creditUrl": "https://unsplash.com",
+      "credit": "Unsplash",
+      "story": "sock-library",
+      "category": "Goofballs",
+      "src": "assets/p9.jpg"
+    },
+    {
+      "id": "p10",
+      "photo": "photo-1672838564872-6a8184194da2",
+      "alt": "Pale yellow puppies nestled together in a wicker basket",
+      "title": "A basket of good mornings",
+      "caption": "The meeting has been called to order. The agenda is mostly naps.",
+      "creditUrl": "https://unsplash.com/photos/mZj60Mms7_Y",
+      "credit": "Photo source on Unsplash",
+      "story": "basket-committee",
+      "category": "Cozy cuddles",
+      "src": "assets/p10.jpg"
+    },
+    {
+      "id": "p11",
+      "photo": "photo-1751315722266-91d26a255a35",
+      "alt": "Black and cream puppies exploring a green lawn",
+      "title": "The backyard expedition",
+      "caption": "Big discoveries. Tiny paws. One extremely interesting blade of grass.",
+      "creditUrl": "https://unsplash.com/photos/AiKqyABzG-s",
+      "credit": "Photo source on Unsplash",
+      "story": "great-expedition",
+      "category": "Adventure",
+      "src": "assets/p11.jpg"
+    },
+    {
+      "id": "p12",
+      "photo": "photo-1672838564839-0b759f75b956",
+      "alt": "Pale yellow puppies exploring grass beside garden plants",
+      "title": "Garden party",
+      "caption": "The guests have arrived, and they are sniffing the decorations.",
+      "creditUrl": "https://unsplash.com/photos/T54mPOyhVI8",
+      "credit": "Photo source on Unsplash",
+      "story": "garden-club",
+      "category": "Adventure",
+      "src": "assets/p12.jpg"
+    },
+    {
+      "id": "p13",
+      "photo": "photo-1769117319103-ea3ade5c4749",
+      "alt": "Three fluffy puppies sitting together in a woven basket",
+      "title": "Three is a cuddle",
+      "caption": "Personal space has been unanimously voted out.",
+      "creditUrl": "https://unsplash.com/photos/SDlg0zwSw_g",
+      "credit": "Photo source on Unsplash",
+      "story": "room-for-one-more",
+      "category": "Cozy cuddles",
+      "src": "assets/p13.jpg"
+    },
+    {
+      "id": "p14",
+      "photo": "photo-1691071590573-f21a82d6e129",
+      "alt": "Brown puppies standing together on a dirt path",
+      "title": "The welcome committee",
+      "caption": "Making friends is easier when everyone brings their whole tail.",
+      "creditUrl": "https://unsplash.com/photos/OkmIvBOhl0s",
+      "credit": "Photo source on Unsplash",
+      "story": "welcome-committee",
+      "category": "Goofballs",
+      "src": "assets/p14.jpg"
+    },
+    {
+      "id": "p15",
+      "photo": "photo-1690223945884-fce6fe6c63d7",
+      "alt": "Brown-and-white puppies gathered on sunlit grass",
+      "title": "Small paws, big plans",
+      "caption": "Nobody knows the plan. Everybody is delighted to be included.",
+      "creditUrl": "https://unsplash.com/photos/JYHnyhRvFaM",
+      "credit": "Photo source on Unsplash",
+      "story": "great-expedition",
+      "category": "Adventure",
+      "src": "assets/p15.jpg"
+    },
+    {
+      "id": "p16",
+      "photo": "photo-1655136056905-943cf5840912",
+      "alt": "White puppies resting in a wooden box on a striped blanket",
+      "title": "The nap shift",
+      "caption": "Working hard at doing absolutely nothing.",
+      "creditUrl": "https://unsplash.com/photos/5OwrztnvAsQ",
+      "credit": "Photo source on Unsplash",
+      "story": "nap-shift",
+      "category": "Cozy cuddles",
+      "src": "assets/p16.jpg"
+    },
+    {
+      "id": "p17",
+      "photo": "photo-1661815157785-d9d026d0d557",
+      "title": "A pocket full of sunshine",
+      "alt": "A golden retriever smiling among tall, sunlit grasses",
+      "caption": "Expert in finding the sunny side.",
+      "category": "Adventure",
+      "creditUrl": "https://unsplash.com/photos/pY1k0jy8Wr8",
+      "credit": "Faber Leonardo / Unsplash",
+      "story": "sunshine-department",
+      "src": "assets/p17.jpg"
+    },
+    {
+      "id": "p18",
+      "photo": "photo-1649609152484-970b013af72a",
+      "title": "Do not disturb: dreaming",
+      "alt": "A black-and-white border collie puppy sleeping on a plaid cushion",
+      "caption": "Currently chasing very slow squirrels.",
+      "category": "Cozy cuddles",
+      "creditUrl": "https://unsplash.com/photos/XYg8NKeWVR4",
+      "credit": "Ramiro Pianarosa / Unsplash",
+      "story": "sleepy-intern",
+      "src": "assets/p18.jpg"
+    },
+    {
+      "id": "p19",
+      "photo": "photo-1556647034-7aa9a4ea7437",
+      "title": "The happiest hello",
+      "alt": "A smiling golden retriever sitting indoors",
+      "caption": "You are, apparently, the best thing that happened today.",
+      "category": "Goofballs",
+      "creditUrl": "https://unsplash.com/photos/_XbNCkQrRd0",
+      "credit": "Helena Lopes / Unsplash",
+      "story": "best-arrival",
+      "src": "assets/p19.jpg"
+    },
+    {
+      "id": "p20",
+      "photo": "photo-1693615775522-ca918881b36b",
+      "title": "Professional daydreamer",
+      "alt": "A relaxed golden retriever lying on a white background",
+      "caption": "Big plans. Horizontal execution.",
+      "category": "Cozy cuddles",
+      "creditUrl": "https://unsplash.com/photos/OggEaiQdyFM",
+      "credit": "Faber Leonardo / Unsplash",
+      "story": "nothing-planned",
+      "src": "assets/p20.jpg"
+    }
+  ],
+  "stories": [
+    {
+      "id": "snow-inspector",
+      "title": "The Snow Inspector",
+      "paragraphs": [
+        "Biscuit stopped at the back door with one paw in the air. Yesterday the yard had been green. Today it was white. He looked at his human, Mara, who appeared unconcerned by this obvious administrative error.",
+        "Outside, he placed a careful paw in the shallow snow, then lifted it to inspect the result. A perfect little print remained. He tried the other paw. Another print. Within seconds, his investigation had produced an extensive paper trail.",
+        "Mara followed with her boots, making enormous marks beside his tiny ones. Biscuit circled back to study them. Whatever had made these tracks was clearly much larger than he was. Fortunately, it also knew where the towels were kept.",
+        "They explored together for a few minutes before heading inside. Mara dried his paws, and Biscuit settled by the window to watch another flurry arrive. On the glass, she traced a little paw with her fingertip. He touched it with his nose. The inspector had nothing further to report, except that tomorrow's assignment looked promising."
+      ],
+      "category": "Winter wonder",
+      "photo": "p1",
+      "new": false
+    },
+    {
+      "id": "grass-is-greener",
+      "title": "The Grass Is Greener Right Here",
+      "paragraphs": [
+        "Daniel had brought a folding chair, a notebook, and a list of things to think about. Peanut had brought himself. They reached the little lawn behind the house, where Peanut immediately selected a patch of grass and lay down.",
+        "Daniel opened the notebook. He wrote a heading, underlined it, and spent several minutes deciding what should come next. Peanut rolled one shoulder toward the sun. A breeze moved through the hedge. Somewhere beyond it, someone laughed.",
+        "After a while, Daniel put the notebook on the empty chair beside him and sat on the grass instead. Peanut opened one eye, checked that his human had finally understood the assignment, and closed it again. The patch had room for both of them.",
+        "When the shade reached their feet, Daniel gathered his things. Under his carefully underlined heading, he added a single sentence: 'Peanut recommends this spot.' It was the least impressive page in the notebook and the only one he wanted to show anyone."
+      ],
+      "category": "Slow afternoons",
+      "photo": "p2",
+      "new": false
+    },
+    {
+      "id": "postcard-home",
+      "title": "A Postcard from the Back Step",
+      "paragraphs": [
+        "When Tessa sent her dad a picture of her corgi, Toast, she meant only to show him the snow. Toast had other ideas about the photograph. He had arranged his face into an expression of deep importance, with a few flakes balanced on his nose.",
+        "Her dad replied with a caption: 'Local official requests warmer sidewalks.' Tessa laughed and sent another picture. This time Toast was beside the back step, waiting to go in. 'Negotiations have moved indoors,' her dad wrote.",
+        "They lived several hours apart and usually saved their conversations for weekends. That morning, the messages kept arriving. A photograph of her dad's coffee. A picture of Toast's towel. A question about dinner. An answer that became a phone call.",
+        "Toast slept through most of it, satisfied that the weather report had been delivered. Tessa warmed her hands around a mug and listened to her dad describe his morning. Outside, the snow kept falling. Inside, a very small photograph had made the distance between two kitchens feel shorter."
+      ],
+      "category": "Family moments",
+      "photo": "p3",
+      "new": false
+    },
+    {
+      "id": "leaf-parade",
+      "title": "The One-Dog Autumn Parade",
+      "paragraphs": [
+        "The first leaf landed directly in front of Pippin during his afternoon walk. He stopped so suddenly that Lee nearly thanked it for observing the crossing rules. Pippin sniffed the leaf. The leaf did nothing. This was suspicious.",
+        "A breeze slid it a few inches along the path. Pippin followed on his leash, ears high. Another leaf joined it, then a third. Lee slowed down. Their usual loop, normally completed between errands, had become a procession.",
+        "At the corner, a neighbor waved from her porch. 'Quite a parade,' she said. Lee looked down at Pippin, who stood among the leaves as though he had personally organized the season. He had never looked more pleased with municipal services.",
+        "They took the long route home. Lee watched the trees instead of the clock, while Pippin inspected every new arrival. There was no band, no crowd, and no prize at the end. But when they reached the front door, Lee held it open with a small bow. The grand marshal went in first."
+      ],
+      "category": "Tiny celebrations",
+      "photo": "p4",
+      "new": false
+    },
+    {
+      "id": "perfect-view",
+      "title": "The Perfect View",
+      "paragraphs": [
+        "Cam had planned a photograph of the water, the distant trees, and perhaps a cloud if one would cooperate. Olive, his corgi, was more interested in a broad, low rock beside the path. She paused there, looking out across the water.",
+        "He nearly encouraged her onward. The view ahead was supposed to be better. Instead, he stopped beside her and followed her gaze. Small ripples caught the light. A bird settled on the opposite bank. Nothing dramatic happened.",
+        "Cam lowered his camera. Olive leaned against his leg, content with the arrangement. They stayed long enough for the cloud he had been waiting for to pass overhead and out of sight. He found that he did not particularly mind.",
+        "Before they left, he took one picture of Olive. Her eyes were half closed and her ears were lifted toward the breeze. Back home, he printed that photograph rather than the wide landscape. He put it beside the door, where it reminded him to leave a little space in the next walk for stopping."
+      ],
+      "category": "Little adventures",
+      "photo": "p5",
+      "new": false
+    },
+    {
+      "id": "winter-recess",
+      "title": "Five Minutes of Winter Recess",
+      "paragraphs": [
+        "Finn had been staring at the same sentence for so long that the words had started to look unfamiliar. At his feet, Noodle stood up, stretched, and walked to the door. Then he walked back. The invitation was difficult to misunderstand.",
+        "In the fenced yard, a thin layer of fresh snow covered the grass. Finn stepped outside with his coat barely zipped. Noodle trotted a small circle, paused, and bounded through his own tracks as if someone else had left them there for entertainment.",
+        "Finn laughed for the first time that afternoon. He tucked his phone into his pocket and watched Noodle make another loop. A few snowflakes landed on his sleeves. For once, he let a moment finish without checking what came next.",
+        "They went back inside after a short play break, and Finn dried Noodle's paws before returning to his desk. The sentence was still there. He deleted half of it and wrote something simpler. Under the desk, Noodle settled down with a sigh. Recess had ended. His work was done."
+      ],
+      "category": "Playtime",
+      "photo": "p6",
+      "new": false
+    },
+    {
+      "id": "basket-committee",
+      "title": "The Basket Committee",
+      "paragraphs": [
+        "The first meeting of the Basket Committee began when a puppy named Waffles placed one paw on his brother's head. This was interpreted as a motion to adjourn. Nobody objected, although someone did sneeze.",
+        "Outside the basket, the morning was already busy. A delivery truck hummed past. A neighbor wrestled with a garden hose. Inside, the committee considered its priorities: finding the warm patch, borrowing a sibling's shoulder, and determining whether the basket handle was looking at them.",
+        "June had planned to answer three emails before breakfast. Instead, she sat beside the basket with her coffee and watched Waffles try to stay awake. His eyes closed, opened with great determination, and closed again. She put her phone facedown.",
+        "When the committee finally adjourned, it did so in a soft, tangled heap. June finished her coffee while it was still warm. Nothing had been accomplished according to her list. She added one item at the bottom: start the day smiling. Then she checked it off."
+      ],
+      "category": "Tiny comedy",
+      "photo": "p10",
+      "new": false
+    },
+    {
+      "id": "great-expedition",
+      "title": "The Great Backyard Expedition",
+      "paragraphs": [
+        "Maple was certain the backyard was enormous. Bean suspected it might go on forever. Together, they prepared for an expedition by standing on the same leaf until it crunched. This was an encouraging start.",
+        "Their human, Eli, followed a few steps behind. He had brought a book and a chair, assuming the morning would involve sitting. Maple had other plans. She discovered a shadow. Bean discovered Maple's shadow. Both discoveries required immediate investigation.",
+        "At the far side of the flowerpot stood a single dandelion. Maple leaned forward. Bean leaned forward. The breeze leaned forward too, and the flower nodded at all three of them. Bean sat down, apparently satisfied that introductions had gone well.",
+        "By the time they returned to Eli's chair, they had traveled perhaps twelve feet. He had read half a page. Maple curled up against his shoe, while Bean settled on the other side. Eli marked his place and looked around the yard. He had lived there for years without ever properly meeting that dandelion."
+      ],
+      "category": "Little adventures",
+      "photo": "p11",
+      "new": false
+    },
+    {
+      "id": "garden-club",
+      "title": "The Unofficial Garden Club",
+      "paragraphs": [
+        "Every Saturday, Rosa tended the pots outside her back door. She spoke to the plants as she worked. One morning, three curious puppies arrived beside her, supervised by her daughter, and listened as though she were delivering a very important lecture.",
+        "Rosa explained that the tallest plant needed a little support. A puppy named Pip tilted his head. She described the new leaves on the smallest pot. Pip tilted his head the other way. Her daughter announced that attendance at Garden Club had never been better.",
+        "They set a blanket on the grass, safely away from the tools and plants. The puppies sat for almost four seconds before rearranging themselves into a pile. Rosa continued her talk anyway. She had always appreciated a relaxed audience.",
+        "Afterward, her daughter took a picture: Rosa with soil on her gloves, the pots bright behind her, and Pip watching a butterfly from the blanket. Rosa printed it for the refrigerator. Underneath, she wrote the club's first official rule: you do not have to understand everything to enjoy being here."
+      ],
+      "category": "Everyday joy",
+      "photo": "p12",
+      "new": false
+    },
+    {
+      "id": "room-for-one-more",
+      "title": "Room for One More",
+      "paragraphs": [
+        "Mochi had claimed the middle of the basket. It was warm, comfortably padded, and offered an excellent view of absolutely everything he did not intend to get up for. His sister, Poppy, settled on his left. This seemed reasonable.",
+        "Then came Fig. Fig was small, hopeful, and carrying an expression that suggested he had misplaced his reservation. He rested his chin on the basket edge. Mochi looked at him. Fig looked back. Poppy yawned through the entire negotiation.",
+        "Their human, Sam, sat nearby and waited. There was another soft bed beside the basket, but Fig had his heart set on company. After a long moment, Mochi shifted one paw. Then a shoulder. Sam helped Fig gently into the newly available space.",
+        "The basket became a little more crowded and a great deal quieter. Fig tucked his nose beside Mochi, who sighed as if accommodating guests were a full-time profession. Five minutes later, all three were asleep. Sam took a seat beside them, leaving the dishes for another moment. There was room for one more quiet thing in the afternoon."
+      ],
+      "category": "Friendship",
+      "photo": "p13",
+      "new": false
+    },
+    {
+      "id": "welcome-committee",
+      "title": "The Welcome Committee",
+      "paragraphs": [
+        "Nina's first morning in the new neighborhood began with a cardboard box labeled KITCHEN, which contained precisely one scarf and a desk lamp. She decided that unpacking could wait. A walk might help.",
+        "At the house next door, her neighbor was supervising three puppies in a fenced yard. The smallest spotted Nina first. Its tail began moving with such commitment that the rest of its body joined in. The other two hurried over to see what deserved a celebration.",
+        "'They take welcoming duties seriously,' the neighbor said. Her name was Jo. Nina introduced herself through the gate, and the conversation moved from moving boxes to the best shady walking route. The puppies listened with the attention usually reserved for interesting smells.",
+        "Nina headed home with Jo's name, a recommendation for a nearby bakery, and a lighter feeling than she had carried out the door. The boxes were still there. The kitchen still contained a desk lamp. But the street outside now had a familiar face, three wagging tails, and a reason to step outside again tomorrow."
+      ],
+      "category": "New beginnings",
+      "photo": "p14",
+      "new": false
+    },
+    {
+      "id": "nap-shift",
+      "title": "Clocking In for the Nap Shift",
+      "paragraphs": [
+        "Alex's Sunday list began ambitiously: laundry, shelves, groceries, and finally sorting the drawer that contained every cable ever manufactured. By two o'clock, the laundry was folded and the drawer had somehow become worse.",
+        "Nearby, the puppies were having a very different afternoon. Two were asleep on a striped blanket. Another was trying to decide whether sitting upright counted as resting. The fourth had already abandoned the question and placed its chin on a sibling.",
+        "Alex sat down beside them for what was supposed to be one minute. The house made its small Sunday sounds: the refrigerator humming, a branch tapping the window, a puppy sighing as though it had completed an exceptionally demanding project.",
+        "Ten minutes passed. Alex got up, made a sandwich, and returned to the shelves. The jobs still needed doing, but they no longer seemed to be chasing one another through the afternoon. Across the room, the nap shift continued without interruption. The cables could wait until next weekend. Their supervisor was asleep."
+      ],
+      "category": "Slow Sundays",
+      "photo": "p16",
+      "new": false
+    },
+    {
+      "id": "sunshine-department",
+      "title": "The Sunshine Department",
+      "category": "Everyday joy",
+      "photo": "p17",
+      "paragraphs": [
+        "Every afternoon at four, Sunny moved his operations to the brightest square of grass in the yard. No appointment was necessary. Visitors were encouraged to bring themselves exactly as they were.",
+        "Today, his human arrived with a half-finished to-do list and a very finished expression. Sunny looked up, thumped his tail twice, and scooted over by a completely unnecessary inch.",
+        "They sat together while a beetle crossed a blade of grass with the determination of a tiny commuter. Somewhere, a lawn mower stopped. The afternoon suddenly sounded much bigger.",
+        "After a while, the human stood up. The list was no shorter, but the day felt less crowded. Sunny stretched out in the warm spot. Another successful appointment at the Sunshine Department."
+      ],
+      "new": true
+    },
+    {
+      "id": "sleepy-intern",
+      "title": "The Sleepiest Intern",
+      "category": "Tiny comedy",
+      "photo": "p18",
+      "paragraphs": [
+        "Pixel arrived for his first day of work with excellent references: soft ears, impeccable paws, and an enthusiasm for sitting directly on important paperwork.",
+        "His supervisor gave him one assignment. Keep the cushion warm. Pixel considered this responsibility carefully, turned around three times, and got straight to work.",
+        "By lunchtime, he had also demonstrated advanced sighing, a promising twitch of the nose, and the ability to make everyone in the room lower their voices without asking.",
+        "At the end of the day, his supervisor wrote his review. A natural at creating a calmer workplace. Excellent commitment to the cushion. Recommended for permanent employment, with regular snack breaks."
+      ],
+      "new": true
+    },
+    {
+      "id": "best-arrival",
+      "title": "The Best Arrival of the Day",
+      "category": "Friendship",
+      "photo": "p19",
+      "paragraphs": [
+        "Milo greeted the door as though it were the stage at a very important awards ceremony. Sometimes it produced a delivery. Sometimes a neighbor. Today, it produced his favorite person.",
+        "She had only been gone twenty minutes. Milo felt that time was a human invention and therefore irrelevant to the celebration. He brought his soft toy, put it down, picked it up again, and nearly sat on it.",
+        "She laughed and crouched beside him. The groceries could wait in their bags for another moment. Milo leaned against her knee, perfectly certain she understood the importance of her arrival.",
+        "Later, when she thought about the day, she did not remember the queue at the store or the rain on the way home. She remembered being welcomed like the headline act. Milo had always been good at choosing what mattered."
+      ],
+      "new": true
+    },
+    {
+      "id": "nothing-planned",
+      "title": "A Beautiful Day for Nothing",
+      "category": "Slow Sundays",
+      "photo": "p20",
+      "paragraphs": [
+        "The calendar had a rare empty square. Louie studied it from the floor, then rolled onto his side. This appeared to be his contribution to the planning meeting.",
+        "His human considered a long drive, an ambitious recipe, and finally reorganizing the books by something more useful than how recently they had fallen over. Louie sighed. It was a persuasive counterproposal.",
+        "They spent the morning with the window open. A breeze turned a page. Louie dreamed something exciting and ran four tiny steps without leaving the rug.",
+        "By evening, there was very little to report. A sandwich had been excellent. A patch of sunlight had moved across the floor. Someone had scratched exactly the right spot behind an ear. The empty square on the calendar had turned out to be quite full."
+      ],
+      "new": true
+    },
+    {
+      "id": "sock-library",
+      "title": "The Unofficial Sock Library",
+      "category": "Tiny comedy",
+      "photo": "p9",
+      "paragraphs": [
+        "Pip collected socks with the quiet dedication of a small librarian. He preferred the soft ones. Matching pairs were accepted but immediately separated for cataloging.",
+        "His human discovered the collection beside his bed: one blue, two striped, and a sock she had assumed belonged to another decade. Pip sat beside it, looking professionally available.",
+        "She traded each sock for one of his toys. A squeaky carrot joined the collection. Then a knotted rope. Pip inspected the new inventory and decided the library could expand its interests.",
+        "That evening, every sock made it back to the drawer. Beside his bed, Pip rested his chin on the carrot. The lending policy remained unclear, but the librarian was very pleased with his day."
+      ],
+      "new": true
+    },
+    {
+      "id": "smallest-parade",
+      "title": "The Smallest Parade",
+      "category": "Little adventures",
+      "photo": "p15",
+      "paragraphs": [
+        "The parade began with a leaf. One puppy followed it across the lawn. A second puppy followed the first. A third joined because something was clearly happening and it would be rude to miss it.",
+        "Their route took them past the flowerpot, around a shoe, and into a surprisingly complicated discussion with a tuft of grass. Nobody knew the destination. Everyone approved of the pace.",
+        "From the garden chair, their human watched the procession circle back to where it had started. The leaf settled down. The puppies settled beside it, proud of their excellent navigation.",
+        "There was no marching band and no grand announcement. Just three little dogs, one interesting leaf, and a morning made better by paying attention. Some parades are exactly the right size."
+      ],
+      "new": true
+    }
+  ]
+}

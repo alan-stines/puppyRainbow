@@ -1,0 +1,22 @@
+<svg viewBox="0 0 150 150" aria-hidden="true" focusable="false">
+          <ellipse cx="75" cy="136" rx="48" ry="7" fill="#633393" opacity=".15"/>
+          <path class="dog-tail" d="M108 106 Q142 101 130 76" fill="none" stroke="#ba743c" stroke-width="14" stroke-linecap="round"/>
+          <ellipse cx="76" cy="109" rx="33" ry="28" fill="#d99b56"/>
+          <ellipse cx="76" cy="113" rx="19" ry="21" fill="#fff1d7"/>
+          <ellipse cx="52" cy="131" rx="16" ry="9" fill="#ba743c"/><ellipse cx="98" cy="131" rx="16" ry="9" fill="#ba743c"/>
+          <g class="dog-head">
+            <path d="M48 40 Q16 23 24 75 Q29 95 45 75" fill="#8d512e"/>
+            <path d="M102 40 Q134 23 126 75 Q121 95 105 75" fill="#8d512e"/>
+            <rect x="36" y="28" width="78" height="67" rx="32" fill="#dfa65e"/>
+            <path d="M69 29 Q59 53 65 70 L85 70 Q91 53 81 29" fill="#fff1d7"/>
+            <g class="dog-eyes" fill="#302333"><ellipse cx="54" cy="60" rx="5" ry="7"/><ellipse cx="96" cy="60" rx="5" ry="7"/><circle cx="55" cy="58" r="1.6" fill="white"/><circle cx="97" cy="58" r="1.6" fill="white"/></g>
+            <ellipse cx="75" cy="78" rx="24" ry="17" fill="#fff1d7"/>
+            <ellipse class="dog-mouth" cx="75" cy="84" rx="10" ry="7" fill="#422437"/>
+            <path d="M70 85 H80 V92 Q75 100 70 92Z" fill="#ef7c98"/>
+            <path d="M67 72 Q75 68 83 72 Q82 79 75 80 Q68 78 67 72" fill="#302333"/>
+          </g>
+          <path d="M48 94 Q75 105 103 94 L89 108 L62 108Z" fill="#633393"/>
+          <path d="M62 101 L88 101 L75 121Z" fill="#ff914d"/>
+          <path d="M67 107 H83 M71 113 H79" stroke="#ffde59" stroke-width="4"/>
+          <circle cx="75" cy="98" r="5" fill="#ffde59"/>
+        </svg>

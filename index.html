@@ -1,333 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PuppyRainbows - Joy, Puppies, and Rainbows!</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles/main.css">
-    <style>
-        .puppy-hero { padding: clamp(2.5rem, 6vw, 5rem) 0; }
-        .puppy-hero .hero-eyebrow { color: var(--primary-color); font-weight: 800; letter-spacing: .12em; text-transform: uppercase; font-size: .8rem; }
-        .puppy-collage { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; padding: 12px; border-radius: 2rem; background: linear-gradient(135deg, #ff914d, #ffde59, #7ed957, #5271ff, #cb6ce6); box-shadow: 0 18px 45px rgba(99, 51, 147, .18); }
-        .puppy-photo { position: relative; margin: 0; overflow: hidden; border-radius: 1.25rem; background: #f0e6ff; }
-        .puppy-photo:first-child { grid-column: 1 / -1; }
-        .puppy-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
-        .puppy-photo:first-child img { aspect-ratio: 3 / 2; object-position: center 40%; }
-        .puppy-photo figcaption { position: absolute; bottom: .75rem; left: .75rem; right: .75rem; width: fit-content; max-width: calc(100% - 1.5rem); padding: .45rem .8rem; border-radius: 1rem; background: rgba(255,255,255,.95); color: #4e2874; font-size: .8rem; font-weight: 700; }
-        .puppy-photo img { transition: transform .3s ease; }
-        @media (hover: hover) { .puppy-photo:hover img { transform: scale(1.04); } }
-        @media (max-width: 575.98px) { .puppy-collage { gap: .65rem; padding: 8px; } .puppy-photo figcaption { font-size: .7rem; padding: .35rem .55rem; left: .5rem; bottom: .5rem; } }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fffdf7">
+  <meta name="description" content="A little more wag. A little less worry. Find your bright spot with happy dog photos, cozy little stories, and Rainbow the playful puppy.">
+  <title>PuppyRainbow · Your daily dose of happy</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="assets/p17.jpg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
-
-    <!-- Header / Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <span class="me-2 fs-3">🐶🌈</span> PuppyRainbows
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li><li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li><li class="nav-item"><a class="nav-link" href="blog.html">Stories</a></li><li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li><li class="nav-item"><a class="nav-link" href="community.html">Community</a></li></ul>
-            </div>
+  <a class="skip-link" href="#main">Skip to the good stuff</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a href="#home" class="brand" aria-label="PuppyRainbow home"><svg class="brand-mark" viewBox="0 0 48 42" aria-hidden="true"><path d="M5 34V25a19 19 0 0 1 38 0v9" fill="none" stroke="#b5a4e0" stroke-width="6"/><path d="M12 34v-9a12 12 0 0 1 24 0v9" fill="none" stroke="#f3b48b" stroke-width="6"/><path d="M19 34v-9a5 5 0 0 1 10 0v9" fill="none" stroke="#e5c867" stroke-width="6"/></svg><span>Puppy<span class="brand-purple">Rainbow</span><small>A LITTLE CORNER OF HAPPY</small></span></a>
+      <nav id="navigation" class="navigation" aria-label="Main navigation">
+        <a href="#home" data-nav="home" aria-current="page">Home</a>
+        <a href="#gallery" data-nav="gallery">The good dogs</a>
+        <a href="#stories" data-nav="stories">Happy tales</a>
+        <a href="#little-joys" data-nav="little-joys">Little joys</a>
+      </nav>
+      <div class="nav-actions"><button class="icon-button saved-nav" id="saved-nav" aria-label="View saved dogs"><span aria-hidden="true">♡</span><span id="saved-count">0</span></button><button class="button button-small nav-break" data-open-pup>Take a puppy break <span aria-hidden="true">↗</span></button><button class="icon-button menu-button" id="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navigation"><span></span><span></span></button></div>
+    </div>
+    <div class="rainbow-rule"></div>
+  </header>
+  <main id="main" tabindex="-1">
+    <div class="view" id="home-view" data-view="home">
+      <section class="hero container" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="little-sun" aria-hidden="true">☀</span> YOUR DAILY DOSE OF HAPPY</p>
+          <h1 id="hero-title">A little more <span class="purple">wag.</span><br>A little less <span class="underlined">worry.</span></h1>
+          <p class="hero-description">Goofy faces. Cozy stories. Unreasonably good dogs.<br class="desktop-break"> A cheerful little place to pause and find your bright spot.</p>
+          <div class="hero-actions"><a class="button" href="#gallery">Meet the good dogs <span aria-hidden="true">↗</span></a><button class="text-button" id="surprise-home"><span class="shuffle-symbol" aria-hidden="true">⤨</span> Surprise me</button></div>
+          <div class="hero-footnote"><div class="mini-faces" aria-hidden="true"><img src="assets/p7.jpg" alt=""><img src="assets/p9.jpg" alt=""><img src="assets/p19.jpg" alt=""></div><p>No bad news. Just very good company.<span>Come as you are. Stay for a smile.</span></p></div>
         </div>
-    </nav>
-
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section class="hero-section puppy-hero" id="our-story" aria-labelledby="hero-title">
-            <div class="container">
-                <div class="row align-items-center g-5">
-                    <div class="col-lg-6 text-center text-lg-start">
-                        <p class="hero-eyebrow mb-3">Big smiles. Little paws. All the joy.</p>
-                        <h1 id="hero-title" class="display-4 fw-bold text-primary-custom mb-4">Your daily dose of puppy happiness.</h1>
-                        <p class="lead text-muted mb-4">Goofy faces, curious noses, and the kind of joy that comes with four paws. Take a little break, meet the pups, and find your bright spot.</p>
-                        <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
-                            <a href="gallery.html" class="btn btn-primary-custom btn-lg">Meet the Pups</a>
-                            <a href="community.html" class="btn btn-outline-rainbow btn-lg">Join the Community</a>
-                        </div>
-                        <p class="small text-muted mt-4 mb-0">A little more tail wagging. A little less doomscrolling.</p>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="puppy-collage" role="group" aria-label="A few faces to brighten your day">
-                            <figure class="puppy-photo">
-                                <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&amp;fit=crop&amp;w=960&amp;h=640&amp;q=85" alt="A beagle looking curiously toward the camera outdoors" width="960" height="640" fetchpriority="high">
-                                <figcaption>Certified day brightener ☀️</figcaption>
-                            </figure>
-                            <figure class="puppy-photo">
-                                <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&amp;fit=crop&amp;w=480&amp;h=360&amp;q=80" alt="A dog posing for a cheerful portrait" width="480" height="360" decoding="async">
-                                <figcaption>Good dog energy ✨</figcaption>
-                            </figure>
-                            <figure class="puppy-photo">
-                                <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&amp;fit=crop&amp;w=480&amp;h=360&amp;q=80" alt="A small dog with upright ears looking at the camera" width="480" height="360" decoding="async">
-                                <figcaption>Small pup. Big personality.</figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Features Section -->
-        <section class="container my-5 py-5">
-            <h2 class="text-center fw-bold text-primary-custom mb-5">Discover What We Offer</h2>
-            <div class="row g-4">
-                <!-- Feature 1 -->
-                <div class="col-md-4">
-                    <div class="card card-custom h-100 text-center p-4">
-                        <div class="card-body">
-                            <div class="display-4 mb-3">📸</div>
-                            <h4 class="card-title mb-3">Puppy Galleries</h4>
-                            <p class="card-text text-muted">Meet sixteen smile-worthy dog photos, from curious little faces to baskets full of sleepy puppies.</p>
-                            <a href="gallery.html" class="text-decoration-none fw-bold" style="color: var(--primary-color);">View Gallery &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Feature 2 -->
-                <div class="col-md-4">
-                    <div class="card card-custom h-100 text-center p-4">
-                        <div class="card-body">
-                            <div class="display-4 mb-3">📚</div>
-                            <h4 class="card-title mb-3">Care Resources</h4>
-                            <p class="card-text text-muted">Access expert advice, training tips, and adoption resources to help you become the best dog parent.</p>
-                            <a href="resources.html" class="text-decoration-none fw-bold" style="color: var(--primary-color);">Learn More &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Feature 3 -->
-                <div class="col-md-4">
-                    <div class="card card-custom h-100 text-center p-4">
-                        <div class="card-body">
-                            <div class="display-4 mb-3">🛍️</div>
-                            <h4 class="card-title mb-3">Rainbow Merch</h4>
-                            <p class="card-text text-muted">Find the perfect blend of joy and style with our specially curated rainbow-themed puppy accessories.</p>
-                            <a href="shop.html" class="text-decoration-none fw-bold" style="color: var(--primary-color);">Shop Now &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <section class="container my-5 py-4 feel-good-section"><div class="row justify-content-center"><div class="col-lg-9 text-center"><h2 class="fw-bold text-primary-custom mb-3">A little more tail wagging, a little less doomscrolling</h2><p class="lead">Some days call for a warm cup of coffee, a goofy puppy photo, and a reminder that small moments matter. This is your cheerful corner of the internet. Stay a while, smile at a dog, and pass the good vibes along.</p></div></div></section>      <section class="container my-5 py-4" aria-labelledby="happy-tales-heading">
-        <div class="text-center mb-4">
-          <p class="text-primary-custom fw-bold">FRESH FROM THE PUPPY PILE</p>
-          <h2 id="happy-tales-heading" class="text-primary-custom fw-bold">A little story break</h2>
-          <p>Original fictional tales for anyone who could use a smile.</p>
+        <div class="hero-art">
+          <div class="hero-dots" aria-hidden="true"></div><span class="hero-spark spark-one" aria-hidden="true">✧</span>
+          <figure class="hero-photo"><img src="assets/p17.jpg" alt="A golden retriever smiling in a field of sunlit grasses" width="1100" height="900" fetchpriority="high"><figcaption><span class="live-dot"></span> Today's forecast: a very good dog.</figcaption></figure>
+          <div class="good-dog-sticker" aria-hidden="true">100%<span>GOOD DOG<br>ENERGY</span><span class="sticker-star">✦</span></div>
+          <figure class="polaroid"><img src="assets/p18.jpg" alt="A border collie puppy taking a very cozy nap" width="220" height="170"><figcaption>Professional napper. ♡</figcaption></figure>
+          <span class="hero-spark spark-two" aria-hidden="true">✳</span>
         </div>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-          <div class="col"><article class="card card-custom gallery-card h-100">
-            <div class="gallery-media"><img src="https://images.unsplash.com/photo-1526137966266-60618b40bcd4?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="A brown-and-white corgi walking across a snowy field" width="800" height="600" loading="lazy" decoding="async"></div>
-            <div class="card-body"><p class="small text-primary-custom fw-bold">New · Winter wonder</p><h3 class="card-title h5">The Snow Inspector</h3><p>The backyard had changed overnight. Inspector Biscuit would need to investigate.</p><a class="fw-bold" href="blog.html#snow-inspector">Read the story &rarr;</a></div>
-          </article></div>
-          <div class="col"><article class="card card-custom gallery-card h-100">
-            <div class="gallery-media"><img src="https://images.unsplash.com/photo-1763718391879-d7ce169564f8?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="A happy corgi sitting in grass scattered with autumn leaves" width="800" height="600" loading="lazy" decoding="async"></div>
-            <div class="card-body"><p class="small text-primary-custom fw-bold">New · Tiny celebrations</p><h3 class="card-title h5">The One-Dog Autumn Parade</h3><p>Pippin believed a crunchy leaf deserved a proper reception.</p><a class="fw-bold" href="blog.html#leaf-parade">Read the story &rarr;</a></div>
-          </article></div>
-          <div class="col"><article class="card card-custom gallery-card h-100">
-            <div class="gallery-media"><img src="https://images.unsplash.com/photo-1705769947686-21cdb68ddc06?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="A small brown dog bounding through fresh snow near a bare tree" width="800" height="600" loading="lazy" decoding="async"></div>
-            <div class="card-body"><p class="small text-primary-custom fw-bold">New · Playtime</p><h3 class="card-title h5">Five Minutes of Winter Recess</h3><p>Finn's calendar was full. Noodle had spotted an opening.</p><a class="fw-bold" href="blog.html#winter-recess">Read the story &rarr;</a></div>
-          </article></div>
-        </div>
-        <p class="text-center mt-4"><a href="blog.html" class="btn btn-primary-custom">Explore all twelve stories</a></p>
       </section>
-</main>
-
-    <!-- Footer -->
-    <footer class="text-center text-lg-start mt-auto">
-        <div class="container p-4">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                    <h5 class="text-uppercase fw-bold mb-3">🐶🌈 PuppyRainbows</h5>
-                    <p>
-                        A fun, uplifting space for dog lovers to celebrate positivity, share stories, and access vital care resources.
-                    </p>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase fw-bold mb-3">Links</h5>
-                    <ul class="list-unstyled mb-0">
-                        <li class="mb-2"><a href="index.html#our-story" class="text-white text-decoration-none">Our Story</a></li>
-                        <li class="mb-2"><a href="gallery.html" class="text-white text-decoration-none">Gallery</a></li>
-                        <li class="mb-2"><a href="resources.html" class="text-white text-decoration-none">Resources</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase fw-bold mb-3">Community</h5>
-                    <ul class="list-unstyled mb-0">
-                        <li class="mb-2"><a href="blog.html" class="text-white text-decoration-none">Blog</a></li>
-                        <li class="mb-2"><a href="community.html" class="text-white text-decoration-none">Forums</a></li>
-                        <li class="mb-2"><a href="shop.html" class="text-white text-decoration-none">Shop</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2026 PuppyRainbows.com
-        </div>
-    </footer>
-
-    <!-- Bootstrap Bundle with JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Rainbow's corner: self-contained SVG animation and gesture-triggered audio. -->
-    <style>
-      .dog-pal { position: fixed; right: max(12px, env(safe-area-inset-right)); bottom: max(12px, env(safe-area-inset-bottom)); z-index: 1040; width: 150px; text-align: center; font-family: Inter, sans-serif; }
-      .dog-pal[hidden] { display: none; }
-      .dog-pal button { cursor: pointer; touch-action: manipulation; }
-      .dog-pal button:focus-visible { outline: 3px solid #ff914d; outline-offset: 3px; }
-      .dog-pal-pet { display: block; width: 140px; height: 140px; margin: auto; padding: 0; border: 0; border-radius: 50%; background: radial-gradient(ellipse at center, #f0e6ff 0%, #fff9 62%, transparent 64%); }
-      .dog-pal-pet svg { width: 100%; height: 100%; overflow: visible; filter: drop-shadow(0 5px 4px #4e287433); }
-      .dog-pal-note { margin: 0; padding: 8px 10px; background: #fff; border: 2px solid #633393; border-radius: 16px 16px 4px 16px; color: #4e2874; font-size: 12px; font-weight: 700; box-shadow: 0 3px 12px #63339320; }
-      .dog-pal-controls { display: flex; justify-content: center; gap: 6px; }
-      .dog-pal-controls button { min-height: 44px; padding: 5px 10px; border: 1px solid #633393; border-radius: 22px; background: #fff; color: #4e2874; font-size: 12px; }
-      .dog-tail { transform-origin: 108px 103px; animation: dog-wag .7s ease-in-out infinite alternate; }
-      .dog-eyes { transform-origin: 75px 62px; animation: dog-blink 5s infinite; }
-      .dog-mouth { transform-origin: 75px 82px; }
-      .dog-pal.yapping .dog-mouth { animation: dog-yap .18s ease-in-out 4 alternate; }
-      .dog-pal.yapping .dog-head { animation: dog-bounce .18s ease-in-out 4 alternate; }
-      @keyframes dog-wag { from { transform: rotate(-12deg); } to { transform: rotate(18deg); } }
-      @keyframes dog-blink { 0%, 43%, 47%, 100% { transform: scaleY(1); } 45% { transform: scaleY(.08); } }
-      @keyframes dog-yap { from { transform: scaleY(.5); } to { transform: scaleY(1.6); } }
-      @keyframes dog-bounce { to { transform: translateY(-3px); } }
-      @media (max-width: 575px) { .dog-pal { width: 128px; } .dog-pal-pet { width: 112px; height: 112px; } }
-      @media (prefers-reduced-motion: reduce) { .dog-pal *, .dog-pal.yapping * { animation: none !important; transition: none !important; } }
-    </style>
-    <aside class="dog-pal" id="dog-pal" aria-label="Rainbow the puppy" hidden>
-      <p class="dog-pal-note" id="dog-pal-note" role="status">Tap me for a little yap!</p>
-      <button class="dog-pal-pet" id="dog-pal-pet" type="button" aria-label="Pet Rainbow and hear a bark">
-        <svg viewBox="0 0 150 150" aria-hidden="true" focusable="false">
-          <ellipse cx="75" cy="136" rx="48" ry="7" fill="#633393" opacity=".15"/>
-          <path class="dog-tail" d="M108 106 Q142 101 130 76" fill="none" stroke="#ba743c" stroke-width="14" stroke-linecap="round"/>
-          <ellipse cx="76" cy="109" rx="33" ry="28" fill="#d99b56"/>
-          <ellipse cx="76" cy="113" rx="19" ry="21" fill="#fff1d7"/>
-          <ellipse cx="52" cy="131" rx="16" ry="9" fill="#ba743c"/><ellipse cx="98" cy="131" rx="16" ry="9" fill="#ba743c"/>
-          <g class="dog-head">
-            <path d="M48 40 Q16 23 24 75 Q29 95 45 75" fill="#8d512e"/>
-            <path d="M102 40 Q134 23 126 75 Q121 95 105 75" fill="#8d512e"/>
-            <rect x="36" y="28" width="78" height="67" rx="32" fill="#dfa65e"/>
-            <path d="M69 29 Q59 53 65 70 L85 70 Q91 53 81 29" fill="#fff1d7"/>
-            <g class="dog-eyes" fill="#302333"><ellipse cx="54" cy="60" rx="5" ry="7"/><ellipse cx="96" cy="60" rx="5" ry="7"/><circle cx="55" cy="58" r="1.6" fill="white"/><circle cx="97" cy="58" r="1.6" fill="white"/></g>
-            <ellipse cx="75" cy="78" rx="24" ry="17" fill="#fff1d7"/>
-            <ellipse class="dog-mouth" cx="75" cy="84" rx="10" ry="7" fill="#422437"/>
-            <path d="M70 85 H80 V92 Q75 100 70 92Z" fill="#ef7c98"/>
-            <path d="M67 72 Q75 68 83 72 Q82 79 75 80 Q68 78 67 72" fill="#302333"/>
-          </g>
-          <path d="M48 94 Q75 105 103 94 L89 108 L62 108Z" fill="#633393"/>
-          <path d="M62 101 L88 101 L75 121Z" fill="#ff914d"/>
-          <path d="M67 107 H83 M71 113 H79" stroke="#ffde59" stroke-width="4"/>
-          <circle cx="75" cy="98" r="5" fill="#ffde59"/>
-        </svg>
-      </button>
-      <div class="dog-pal-controls">
-        <button id="dog-pal-mute" type="button" aria-pressed="false" aria-label="Mute puppy sound">Mute</button>
-        <button id="dog-pal-hide" type="button" aria-label="Hide puppy">Hide</button>
-      </div>
-    </aside>
-    <script>
-    (() => {
-      const pal = document.getElementById('dog-pal');
-      const pet = document.getElementById('dog-pal-pet');
-      const note = document.getElementById('dog-pal-note');
-      const mute = document.getElementById('dog-pal-mute');
-      let muted = false, busy = false, timer, playback = 0;
-      const audio = document.createElement('audio');
-      audio.preload = 'auto';
-      audio.setAttribute('playsinline', '');
-      audio.src = makeBarkClip();
-      try { muted = localStorage.getItem('puppyRainbow.muted') === 'true'; } catch {}
-      function syncMute() {
-        mute.textContent = muted ? 'Unmute' : 'Mute';
-        mute.setAttribute('aria-pressed', String(muted));
-        mute.setAttribute('aria-label', muted ? 'Unmute puppy sound' : 'Mute puppy sound');
-        pet.setAttribute('aria-label', muted ? 'Pet Rainbow (sound muted)' : 'Pet Rainbow and hear a bark');
-      }
-      // Build a small PCM WAV once, then use the mobile media playback path.
-      // No network request, AudioContext, or asynchronous work before play().
-      function makeBarkClip() {
-        const rate = 22050, duration = .58;
-        const count = Math.ceil(rate * duration);
-        const bytes = new Uint8Array(44 + count * 2);
-        const view = new DataView(bytes.buffer);
-        const text = (offset, value) => {
-          for (let i = 0; i < value.length; i++) bytes[offset + i] = value.charCodeAt(i);
-        };
-        text(0, 'RIFF'); view.setUint32(4, bytes.length - 8, true);
-        text(8, 'WAVE'); text(12, 'fmt ');
-        view.setUint32(16, 16, true); view.setUint16(20, 1, true);
-        view.setUint16(22, 1, true); view.setUint32(24, rate, true);
-        view.setUint32(28, rate * 2, true); view.setUint16(32, 2, true);
-        view.setUint16(34, 16, true); text(36, 'data');
-        view.setUint32(40, count * 2, true);
-        for (let i = 0; i < count; i++) {
-          const time = i / rate;
-          const t = time < .28 ? time : time - .28;
-          let value = 0;
-          if (t < .22) {
-            const envelope = Math.min(t / .008, 1) * Math.pow(1 - t / .22, 1.5);
-            const phase = 2 * Math.PI * (280 * t - 180 * t * t);
-            value = envelope * (.42 * Math.sin(phase) + .24 * Math.sin(phase * 2)
-              + .14 * Math.sin(phase * 3) + .10 * (Math.random() * 2 - 1));
-          }
-          view.setInt16(44 + i * 2, Math.round(value * 32767), true);
-        }
-        let binary = '';
-        for (const byte of bytes) binary += String.fromCharCode(byte);
-        return 'data:audio/wav;base64,' + btoa(binary);
-      }
-      function stopSound() {
-        playback++;
-        audio.pause();
-        try { audio.currentTime = 0; } catch {}
-      }
-      function bark() {
-        if (muted || pal.hidden || document.hidden) return;
-        const request = ++playback;
-        const failed = () => {
-          if (request !== playback || muted || pal.hidden || document.hidden) return;
-          note.textContent = 'Sound blocked. Tap again, or try Safari/Chrome with media volume up.';
-          busy = false;
-          pal.classList.remove('yapping');
-        };
-        try {
-          audio.currentTime = 0;
-          // Keep play() in the original click handler for mobile user activation.
-          const playing = audio.play();
-          if (playing && typeof playing.catch === 'function') playing.catch(failed);
-        } catch { failed(); }
-      }
-      pet.addEventListener('click', () => {
-        if (busy) return;
-        clearTimeout(timer);
-        busy = true;
-        pal.classList.add('yapping');
-        note.textContent = muted ? 'Woof! Quiet mode, big love.' : 'Yap yap! You made my tail wag!';
-        void bark();
-        timer = setTimeout(() => { pal.classList.remove('yapping'); busy = false; }, 800);
-      });
-      mute.addEventListener('click', () => {
-        muted = !muted;
-        if (muted) stopSound();
-        syncMute();
-        note.textContent = muted ? 'Quiet mode. Still a good dog.' : 'Sound on! Here is a little yap.';
-        if (!muted) bark();
-        try { localStorage.setItem('puppyRainbow.muted', String(muted)); } catch {}
-      });
-      document.getElementById('dog-pal-hide').addEventListener('click', () => {
-        stopSound(); clearTimeout(timer); pal.hidden = true;
-        document.querySelector('main a')?.focus({ preventScroll: true });
-      });
-      document.addEventListener('visibilitychange', () => { if (document.hidden) stopSound(); });
-      syncMute();
-      pal.hidden = false;
-    })();
-    </script>
-
+      <div class="happy-strip" aria-hidden="true"><span>SMALL PAWS, BIG FEELINGS</span><i>✦</i><span>MORE TAIL WAGS</span><i>✦</i><span>A LITTLE LESS DOOMSCROLLING</span><i>✦</i><span>VERY GOOD DOGS ONLY</span><i>✦</i><span>SMALL PAWS, BIG FEELINGS</span></div>
+      <section class="section container" aria-labelledby="faces-title">
+        <div class="section-heading"><div><p class="eyebrow">THE INTERNET'S GOOD SIDE</p><h2 id="faces-title">A few faces to brighten your day<span class="purple">.</span></h2></div><a class="arrow-link" href="#gallery">Meet the whole pack <span aria-hidden="true">↗</span></a></div>
+        <div class="photo-grid home-grid" id="home-photos" aria-label="Featured dogs"></div>
+      </section>
+      <section class="container story-feature" aria-labelledby="featured-story-title">
+        <div class="feature-image"><img src="assets/p18.jpg" alt="A sleeping border collie puppy curled on a soft cushion" width="1100" height="800" loading="lazy"><span class="image-label">A 1-MINUTE HAPPY PLACE</span></div>
+        <div class="feature-copy"><p class="eyebrow">PULL UP A COMFY CHAIR</p><h2 id="featured-story-title">Small stories.<br>Big warm fuzzies.</h2><p>Meet the sleepiest intern, a very enthusiastic welcome committee, and the dogs making ordinary days a little extraordinary.</p><button class="button button-purple" data-story="sleepy-intern">Read The Sleepiest Intern <span aria-hidden="true">↗</span></button><a class="subtle-link" href="#stories">Or find your next favorite tale →</a><span class="fiction-note">Original fictional stories. Real permission to smile.</span></div>
+      </section>
+      <section class="section container joy-teaser" aria-labelledby="teaser-title"><div class="joy-doodle" aria-hidden="true">✦<span>☺</span>✧</div><div><p class="eyebrow">A TINY INVITATION</p><h2 id="teaser-title">You don't have to earn a little joy.</h2><p>Take a breath. Admire a dog. Give yourself a minute.<br>There's room for something good in an ordinary day.</p><a class="arrow-link" href="#little-joys">Find a little joy <span aria-hidden="true">↗</span></a></div></section>
+    </div>
+    <div class="view" id="gallery-view" data-view="gallery" hidden>
+      <section class="container collection-heading"><p class="eyebrow">ONE PACK. SO MANY PERSONALITIES.</p><h1>The good <span class="purple">dogs.</span></h1><p>Twenty little reminders that the world still has a lot of good in it.<br>Pick a mood, save a favorite, or let a pup find you.</p></section>
+      <section class="container collection-section" aria-label="Dog photo gallery"><div class="collection-tools"><div class="filters" id="photo-filters" role="group" aria-label="Filter dogs"><button data-filter="All pups" aria-pressed="true">All pups</button><button data-filter="Goofballs" aria-pressed="false">Goofballs</button><button data-filter="Adventure" aria-pressed="false">Adventure</button><button data-filter="Cozy cuddles" aria-pressed="false">Cozy cuddles</button><button data-filter="Saved" aria-pressed="false">♡ Saved</button></div><button class="text-button" id="shuffle-photos"><span aria-hidden="true">⤨</span> Shuffle the pack</button></div><p id="gallery-result" class="result-label" role="status"></p><div class="photo-grid" id="gallery-photos"></div><div class="empty-state" id="gallery-empty" hidden><span aria-hidden="true">♡</span><h2>A little space for your favorites.</h2><p>Tap a heart on any dog to keep them here. Saved on this device.</p><button class="button button-purple" id="show-all-dogs">Meet the pack</button></div></section>
+    </div>
+    <div class="view" id="stories-view" data-view="stories" hidden>
+      <section class="container collection-heading"><p class="eyebrow">SHORT READS. LONG-LASTING SMILES.</p><h1>Happy <span class="purple">tales.</span></h1><p>Little adventures, excellent naps, and beautifully ordinary days.<br>Eighteen original fictional stories, best enjoyed at your own pace.</p></section>
+      <section class="container collection-section" aria-label="Story collection"><div class="story-tools"><div class="filters" id="story-filters" role="group" aria-label="Filter stories"><button data-story-filter="All stories" aria-pressed="true">All stories</button><button data-story-filter="New tales" aria-pressed="false">New tales</button><button data-story-filter="Read" aria-pressed="false">Already enjoyed</button></div><label class="search-label"><span aria-hidden="true">⌕</span><span class="sr-only">Search happy tales</span><input id="story-search" type="search" placeholder="Find your kind of happy…" maxlength="100"></label></div><p class="result-label" id="story-result" role="status"></p><div class="story-grid" id="story-grid"></div><p class="empty-state" id="story-empty" hidden>No tales here yet. Try another search, or settle in with a story.</p></section>
+    </div>
+    <div class="view" id="little-joys-view" data-view="little-joys" hidden>
+      <section class="container collection-heading"><p class="eyebrow">A SMALL BREAK IS STILL A BREAK</p><h1>Collect the <span class="purple">little joys.</span></h1><p>A small invitation to make an ordinary moment feel a little brighter.</p></section>
+      <section class="container joy-layout"><div class="joy-card"><span class="joy-card-icon" aria-hidden="true">✷</span><p class="eyebrow">YOUR LITTLE JOY FOR RIGHT NOW</p><h2 id="joy-title">Find your patch of sunshine.</h2><p id="joy-description">Look for one small lovely thing nearby. A warm mug, a good song, a very ambitious houseplant. Let it have your attention for a minute.</p><button class="button button-purple" id="another-joy">Another little joy <span aria-hidden="true">⤨</span></button><p class="joy-counter" id="joy-counter" role="status">No productivity required.</p></div><div class="joy-aside"><img src="assets/p20.jpg" alt="A golden retriever relaxing with absolutely nothing on the agenda" width="1100" height="800"><h2>Rainbow has cleared<br>his schedule for you.</h2><p>He's available for head pats, pretend fetch, and extremely important snack breaks.</p><button class="text-button" data-open-pup>Say hello to Rainbow <span aria-hidden="true">↗</span></button></div></section>
+      <section class="container about-note"><p class="eyebrow">WHY THIS LITTLE PLACE EXISTS</p><h2>More tail wagging.<br>Less doomscrolling.</h2><p>PuppyRainbow began with a simple idea: the internet could use a few more dogs and a little more kindness. This is a corner for small stories, goofy faces, and the kind of company that doesn't need you to say much.</p><p>Come back whenever you need a bright spot. The dogs will be here.</p><a class="arrow-link" href="#gallery">Back to the good dogs <span aria-hidden="true">↗</span></a></section>
+    </div>
+    <p id="loading-error" class="container error-state" hidden>Our pack is taking a moment to arrive. Please refresh to try again.</p>
+    <noscript><p class="container error-state">The dog photos and stories use JavaScript. Enable it to explore the pack and play with Rainbow.</p></noscript>
+  </main>
+  <footer class="site-footer"><div class="container footer-top"><div><a class="brand footer-brand" href="#home">Puppy<span class="brand-purple">Rainbow</span><span aria-hidden="true">✦</span></a><p>A little corner of the internet.<br>A whole lot of good dog energy.</p></div><div class="footer-links"><a href="#gallery">The good dogs</a><a href="#stories">Happy tales</a><a href="#little-joys">Little joys</a><button class="plain-button" id="photo-credits">Photo credits</button></div></div><div class="container footer-bottom"><p>Made for brighter days. © 2026 PuppyRainbow</p><p>Take the good feeling with you. <span aria-hidden="true">♡</span></p></div></footer>
+  <aside class="puppy-companion" aria-label="Rainbow the puppy">
+    <button id="puppy-launcher" class="puppy-launcher" aria-expanded="false" aria-controls="puppy-panel"><span class="launcher-label">A little hello?</span><span class="launcher-dog dog-svg" aria-hidden="true"></span><span class="launcher-name">Meet Rainbow <span aria-hidden="true">↗</span></span></button>
+    <section id="puppy-panel" class="puppy-panel" aria-label="Play with Rainbow" hidden><div class="puppy-panel-header"><div><strong>Rainbow's corner</strong><span>Very good company.</span></div><button class="icon-button" id="puppy-close" aria-label="Tuck Rainbow away">×</button></div><div id="puppy-stage" class="puppy-stage"><span id="puppy-particles" aria-hidden="true">♡ ✦ ♡</span><span class="ball" aria-hidden="true"></span><span class="treat" aria-hidden="true">🦴</span><button class="pet-dog dog-svg" id="pet-dog" aria-label="Give Rainbow a head pat"></button></div><p id="puppy-status" role="status" aria-live="polite">Hi, friend! A head pat would make my day.</p><div class="puppy-play-actions"><button data-puppy-action="pet">♡ Pet</button><button data-puppy-action="fetch">◉ Fetch</button><button data-puppy-action="treat">✦ Treat</button></div><div class="puppy-settings"><button id="sound-toggle" aria-pressed="false">Sound off</button><span>Always happy on silent.</span></div></section>
+  </aside>
+  <dialog id="photo-dialog" class="photo-dialog" aria-labelledby="photo-dialog-title"><button class="dialog-close icon-button" aria-label="Close dog photo" data-close-dialog>×</button><div class="photo-dialog-image"><img id="dialog-photo" alt=""><div class="lightbox-arrows"><button class="icon-button" id="photo-prev" aria-label="Previous dog">←</button><button class="icon-button" id="photo-next" aria-label="Next dog">→</button></div></div><div class="photo-dialog-copy"><p class="eyebrow" id="photo-dialog-category"></p><h2 id="photo-dialog-title"></h2><p id="photo-dialog-caption"></p><div class="dialog-photo-actions"><button class="button button-purple" id="dialog-save"></button><button class="text-button" id="dialog-read">Read their little tale ↗</button></div><a id="dialog-credit" class="credit-link" target="_blank" rel="noopener noreferrer"></a><p class="storage-note">Favorites stay on this device.</p></div></dialog>
+  <dialog id="story-dialog" class="story-dialog" aria-labelledby="story-dialog-title"><button class="dialog-close icon-button" aria-label="Close story" data-close-dialog>×</button><img id="story-dialog-photo" class="story-dialog-photo" alt=""><article class="story-reader"><p class="eyebrow" id="story-dialog-category"></p><h2 id="story-dialog-title"></h2><p class="reader-meta">Original fiction · About a minute · Just for a smile</p><div id="story-dialog-body"></div><div class="story-ending"><span aria-hidden="true">✦</span><p>A little time well spent.</p><button class="button button-purple" id="next-story">One more happy tale <span aria-hidden="true">↗</span></button></div></article></dialog>
+  <dialog id="credits-dialog" class="credits-dialog" aria-labelledby="credits-title"><button class="dialog-close icon-button" aria-label="Close photo credits" data-close-dialog>×</button><p class="eyebrow">THE PEOPLE BEHIND THE PICTURES</p><h2 id="credits-title">A little gratitude.</h2><p>Dog photography from Unsplash. The names, characters, and stories on PuppyRainbow are fictional; the photos are here to spark a smile.</p><ul id="credits-list"></ul></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
 </body>
 </html>
