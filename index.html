@@ -9,7 +9,9 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" as="image" href="assets/p17.jpg">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="extras.css">
   <script src="app.js" defer></script>
+  <script src="extras.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to the good stuff</a>
@@ -53,6 +55,20 @@
         <div class="feature-image"><img src="assets/p18.jpg" alt="A sleeping border collie puppy curled on a soft cushion" width="1100" height="800" loading="lazy"><span class="image-label">A 1-MINUTE HAPPY PLACE</span></div>
         <div class="feature-copy"><p class="eyebrow">PULL UP A COMFY CHAIR</p><h2 id="featured-story-title">Small stories.<br>Big warm fuzzies.</h2><p>Meet the sleepiest intern, a very enthusiastic welcome committee, and the dogs making ordinary days a little extraordinary.</p><button class="button button-purple" data-story="sleepy-intern">Read The Sleepiest Intern <span aria-hidden="true">↗</span></button><a class="subtle-link" href="#stories">Or find your next favorite tale →</a><span class="fiction-note">Original fictional stories. Real permission to smile.</span></div>
       </section>
+      <section class="container puppy-extras" aria-labelledby="extras-title">
+  <div class="puppy-extras-header"><p class="eyebrow">SCIENTIFICALLY UNVERIFIED. EMOTIONALLY ACCURATE.</p><h2 id="extras-title">A little extra <span class="purple">puppy magic.</span></h2><p>Pick your current vibe, ask the dogs for a wildly optimistic prediction, and take exactly as much silliness as you need.</p></div>
+  <div class="puppy-extras-grid">
+    <section class="pup-play-card" id="pup-quiz" aria-labelledby="quiz-title"><p class="eyebrow">THE IMPORTANT PERSONALITY TEST</p><h3 id="quiz-title">Which pup are you today?</h3><p>No wrong answers. All outcomes are extremely good dogs.</p>
+      <div class="pup-choices" role="group" aria-label="Choose your current mood">
+        <button class="pup-choice" data-vibe="0" aria-pressed="false">💤 Cozy and unbothered</button>
+        <button class="pup-choice" data-vibe="1" aria-pressed="false">🎾 Pure chaos, excellent intentions</button>
+        <button class="pup-choice" data-vibe="2" aria-pressed="false">🐾 Ready for an adventure</button>
+        <button class="pup-choice" data-vibe="3" aria-pressed="false">☀️ Here to brighten the room</button>
+      </div><div id="quiz-result" class="pup-result" role="status" aria-live="polite" hidden></div>
+    </section>
+    <section class="pup-play-card fortune" id="pup-fortune" aria-labelledby="fortune-title"><p class="eyebrow">THE TAIL-WAGGING ORACLE</p><h3 id="fortune-title">Your fortune, from a dog.</h3><span class="pup-fortune-emoji" aria-hidden="true">🔮🐶</span><p id="fortune-text" role="status" aria-live="polite">The universe says you're due for a good thing. Ask the dog for specifics.</p><button class="button button-purple" id="fortune-button">Fetch my fortune ↗</button><p id="fortune-count">For entertainment, not life decisions. Obviously.</p></section>
+  </div>
+</section>
       <section class="section container joy-teaser" aria-labelledby="teaser-title"><div class="joy-doodle" aria-hidden="true">✦<span>☺</span>✧</div><div><p class="eyebrow">A TINY INVITATION</p><h2 id="teaser-title">You don't have to earn a little joy.</h2><p>Take a breath. Admire a dog. Give yourself a minute.<br>There's room for something good in an ordinary day.</p><a class="arrow-link" href="#little-joys">Find a little joy <span aria-hidden="true">↗</span></a></div></section>
     </div>
     <div class="view" id="gallery-view" data-view="gallery" hidden>
@@ -60,7 +76,7 @@
       <section class="container collection-section" aria-label="Dog photo gallery"><div class="collection-tools"><div class="filters" id="photo-filters" role="group" aria-label="Filter dogs"><button data-filter="All pups" aria-pressed="true">All pups</button><button data-filter="Goofballs" aria-pressed="false">Goofballs</button><button data-filter="Adventure" aria-pressed="false">Adventure</button><button data-filter="Cozy cuddles" aria-pressed="false">Cozy cuddles</button><button data-filter="Saved" aria-pressed="false">♡ Saved</button></div><button class="text-button" id="shuffle-photos"><span aria-hidden="true">⤨</span> Shuffle the pack</button></div><p id="gallery-result" class="result-label" role="status"></p><div class="photo-grid" id="gallery-photos"></div><div class="empty-state" id="gallery-empty" hidden><span aria-hidden="true">♡</span><h2>A little space for your favorites.</h2><p>Tap a heart on any dog to keep them here. Saved on this device.</p><button class="button button-purple" id="show-all-dogs">Meet the pack</button></div></section>
     </div>
     <div class="view" id="stories-view" data-view="stories" hidden>
-      <section class="container collection-heading"><p class="eyebrow">SHORT READS. LONG-LASTING SMILES.</p><h1>Happy <span class="purple">tales.</span></h1><p>Little adventures, excellent naps, and beautifully ordinary days.<br>Eighteen original fictional stories, best enjoyed at your own pace.</p></section>
+      <section class="container collection-heading"><p class="eyebrow">SHORT READS. LONG-LASTING SMILES.</p><h1>Happy <span class="purple">tales.</span></h1><p>Little adventures, excellent naps, and beautifully ordinary days.<br>Twenty-two original fictional stories, best enjoyed at your own pace.</p></section>
       <section class="container collection-section" aria-label="Story collection"><div class="story-tools"><div class="filters" id="story-filters" role="group" aria-label="Filter stories"><button data-story-filter="All stories" aria-pressed="true">All stories</button><button data-story-filter="New tales" aria-pressed="false">New tales</button><button data-story-filter="Read" aria-pressed="false">Already enjoyed</button></div><label class="search-label"><span aria-hidden="true">⌕</span><span class="sr-only">Search happy tales</span><input id="story-search" type="search" placeholder="Find your kind of happy…" maxlength="100"></label></div><p class="result-label" id="story-result" role="status"></p><div class="story-grid" id="story-grid"></div><p class="empty-state" id="story-empty" hidden>No tales here yet. Try another search, or settle in with a story.</p></section>
     </div>
     <div class="view" id="little-joys-view" data-view="little-joys" hidden>
