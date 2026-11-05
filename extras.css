@@ -1,0 +1,27 @@
+
+/* Extra little joys */
+.puppy-extras { padding-block: clamp(3rem, 7vw, 6rem); }
+.puppy-extras-header { max-width: 670px; margin-bottom: 1.8rem; }
+.puppy-extras-header h2 { font-size: clamp(2rem, 4vw, 3.3rem); line-height: 1.12; margin: .4rem 0 1rem; }
+.puppy-extras-header p:last-child { max-width: 60ch; }
+.puppy-extras-grid { display:grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 1.25rem; }
+.pup-play-card { border: 1px solid #e9deed; border-radius: 26px; padding: clamp(1.25rem, 3vw, 2rem); background: #fff; box-shadow: 0 10px 35px rgba(74,35,99,.06); }
+.pup-play-card.fortune { background: #fff7e8; }
+.pup-play-card h3 { margin: .15rem 0 .65rem; font-size: clamp(1.4rem, 2vw, 1.9rem); }
+.pup-play-card p { line-height: 1.6; }
+.pup-choices { display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; margin-top: 1.3rem; }
+.pup-choice { min-height: 64px; padding: .8rem; border: 2px solid #e4d6f0; border-radius: 16px; background: #fcfaff; color: #40304e; text-align: left; font: inherit; font-weight: 700; cursor:pointer; touch-action:manipulation; transition: background .15s, border-color .15s; }
+.pup-choice:hover, .pup-choice[aria-pressed="true"] { background: #efe3fb; border-color: #7950a4; }
+.pup-choice:focus-visible, #fortune-button:focus-visible { outline: 3px solid #633393; outline-offset: 3px; }
+.pup-result { display:flex; align-items:center; gap: 1rem; margin-top: 1.2rem; padding: 1rem; background:#f8f2ff; border-radius:18px; }
+.pup-result[hidden] { display:none; }
+.pup-result img { object-fit:cover; border-radius:14px; width:105px; height:110px; flex-shrink:0; }
+.pup-result h3 { font-size:1.25rem; }
+.pup-result p { margin: .4rem 0; }
+.pup-fortune-emoji { font-size: 3rem; line-height: 1; display:block; margin: 1rem 0; }
+#fortune-text { min-height: 5em; font-size: 1.12rem; font-weight: 600; }
+#fortune-button { margin-top: .6rem; }
+#fortune-count { color: #655a6e; font-size:.85rem; }
+@media (max-width: 800px) { .puppy-extras-grid { grid-template-columns:1fr; } }
+@media (max-width: 480px) { .pup-choices { grid-template-columns:1fr; } .pup-result { align-items:flex-start; } .pup-result img { width:85px; height:100px; } }
+@media (prefers-reduced-motion: reduce) { .pup-choice { transition:none; } }

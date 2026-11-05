@@ -80,7 +80,7 @@
       "caption": "Every walk begins with a very thorough neighborhood inspection.",
       "creditUrl": "https://unsplash.com",
       "credit": "Unsplash",
-      "story": null,
+      "story": "beagle-neighborhood-watch",
       "category": "Goofballs",
       "src": "assets/p7.jpg"
     },
@@ -92,7 +92,7 @@
       "caption": "No appointment necessary. This face is always ready for its close-up.",
       "creditUrl": "https://unsplash.com",
       "credit": "Unsplash",
-      "story": null,
+      "story": "camera-ready-captain",
       "category": "Goofballs",
       "src": "assets/p8.jpg"
     },
@@ -237,7 +237,7 @@
       "category": "Cozy cuddles",
       "creditUrl": "https://unsplash.com/photos/OggEaiQdyFM",
       "credit": "Faber Leonardo / Unsplash",
-      "story": "nothing-planned",
+      "story": "board-meeting-nap",
       "src": "assets/p20.jpg"
     }
   ],
@@ -475,6 +475,58 @@
         "There was no marching band and no grand announcement. Just three little dogs, one interesting leaf, and a morning made better by paying attention. Some parades are exactly the right size."
       ],
       "new": true
+    },
+    {
+      "id": "beagle-neighborhood-watch",
+      "title": "The Neighborhood Watch (Mostly Squirrels)",
+      "photo": "p7",
+      "category": "Goofy adventures",
+      "new": true,
+      "paragraphs": [
+        "Every morning, Inspector Pickles took his position at the front window. His duties were demanding: one mail carrier, three suspicious leaves, and an ongoing investigation into the squirrel across the street.",
+        "At nine seventeen, the squirrel appeared. Pickles pressed his nose to the glass and made a sound that could only be described as a tiny, disappointed trombone. The squirrel, clearly aware of the surveillance, sat down to eat an acorn.",
+        "Pickles' human, Jo, joined him with a cup of tea. Together they watched the squirrel wander along the fence and disappear into the maple tree. Jo filed the report aloud: 'No crimes today, Inspector.' Pickles disagreed but appreciated the professionalism.",
+        "At lunchtime, the squirrel returned and dropped an acorn on the step. Pickles considered this a peace offering. He allowed the neighborhood to remain under his protection and took a very well-earned nap."
+      ]
+    },
+    {
+      "id": "camera-ready-captain",
+      "title": "Captain Biscuit and the Accidental Portrait",
+      "photo": "p8",
+      "category": "Little victories",
+      "new": true,
+      "paragraphs": [
+        "Captain Biscuit had never understood why people pointed rectangles at him. Every time his human said 'picture,' he sat very tall, tilted his head, and waited for whatever delicious thing usually followed.",
+        "One afternoon, during a family video call, Biscuit wandered directly between the camera and his human. His nose filled the screen. The family erupted in laughter, and someone shouted that he should run for mayor.",
+        "Biscuit took the endorsement seriously. He shook his ears, sat on the keyboard, and sent a long row of mysterious letters into the chat. His campaign platform was immediately clear: more snacks, fewer closed doors, universal belly rubs.",
+        "His human printed a screenshot and put it on the fridge. Biscuit examined the portrait, approved of the lighting, and returned to his favorite chair. Public service, he decided, was exhausting."
+      ]
+    },
+    {
+      "id": "sock-detective-two",
+      "title": "The Case of the Missing Tuesday Sock",
+      "photo": "p9",
+      "category": "Goofy adventures",
+      "new": true,
+      "paragraphs": [
+        "The laundry basket had been turned upside down, and Tuesday's blue sock was nowhere to be found. Detective Waffles arrived at the scene with both ears alert and absolutely no training.",
+        "He sniffed the laundry room, checked beneath the couch, and inspected a crumb that had nothing to do with the case but was nonetheless worth documenting. His human followed behind him with the other blue sock.",
+        "At last, Waffles approached his own bed. Under the edge of the blanket lay the missing sock, carefully tucked beside a squeaky carrot and a toy dinosaur. The evidence was overwhelming. The detective stared at it with the calm of someone who had expected this all along.",
+        "His human laughed and retrieved the sock. Waffles accepted a scratch behind the ears for solving the mystery, then quietly moved the dinosaur to a safer location. Some secrets were best kept between friends."
+      ]
+    },
+    {
+      "id": "board-meeting-nap",
+      "title": "The Very Important Meeting About Nothing",
+      "photo": "p20",
+      "category": "Cozy moments",
+      "new": true,
+      "paragraphs": [
+        "Maple the golden retriever called a meeting at two in the afternoon. The agenda included one sunny patch of carpet, a particularly fluffy pillow, and a strong preference for no further agenda items.",
+        "Her human, Eli, had spent the morning answering messages and making lists. Maple approached his desk, rested her chin on his knee, and offered a look that suggested his calendar had a serious scheduling problem.",
+        "Eli moved to the living room and sat beside her. For a while, they listened to the washing machine turn, the wind rustle through the tree outside, and the soft rhythm of Maple's sleepy breathing.",
+        "At three, Eli returned to work feeling strangely lighter. Maple remained on the carpet to prepare the minutes. Meeting outcome: no action items. Excellent attendance. Unanimous approval to meet again tomorrow."
+      ]
     }
   ]
 }
