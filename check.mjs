@@ -5,10 +5,10 @@ import {fileURLToPath} from 'node:url';
 const root = path.dirname(fileURLToPath(import.meta.url));
 const content = JSON.parse(fs.readFileSync(path.join(root,'content.json')));
 assert.equal(content.photos.length,20);
-assert.equal(content.stories.length,18);
-assert.equal(content.stories.filter(s=>s.new).length,6);
+assert.equal(content.stories.length,22);
+assert.equal(content.stories.filter(s=>s.new).length,10);
 assert.equal(new Set(content.photos.map(p=>p.id)).size,20);
-assert.equal(new Set(content.stories.map(s=>s.id)).size,18);
+assert.equal(new Set(content.stories.map(s=>s.id)).size,22);
 for (const p of content.photos) {
  assert(p.alt && p.credit && p.creditUrl.startsWith('https://unsplash.com'));
  assert(fs.statSync(path.join(root,p.src)).size > 1000);
@@ -26,4 +26,4 @@ for (const m of html.matchAll(/(?:src|href)="([^"#]+)"/g)) {
 const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
 assert.equal(ids.length,new Set(ids).size,'Duplicate HTML id');
 assert(html.includes('role="status"'));
-console.log('Content and asset checks passed: 20 photos, 18 stories, 6 new tales.');
+console.log('Content and asset checks passed: 20 photos, 22 stories, 10 new tales.');
